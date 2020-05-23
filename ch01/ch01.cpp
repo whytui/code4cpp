@@ -3,18 +3,18 @@
 * 时间：2020/5/23-0:08
 * 作用：
 */
-#include <iostream>
-#include <ctime>
+#include "ch01.h"
 
-using namespace std;
-
-#define PI 3.1415926
+void ch01()
+{
+    scanInput();
+}
 
 void scanInput()
 {
     /**
      * C++中，cin表示标准控制台输入
-     * >> 为流提取
+     * >> 为流提取符号
      */
     double radius = 0;
     cout << "输入半径：";
@@ -22,9 +22,7 @@ void scanInput()
     // scanf("%lf", &radius);
     double area = radius * radius * PI;
     cout << "圆的面积=" << area << endl;
-
-    int a = sizeof(area);
-    cout << a << "byte" << endl;
+    cout << "double类型长度为：" << sizeof(area) << "byte" << endl;
 }
 
 void scanMultiple()
