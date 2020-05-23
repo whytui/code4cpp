@@ -7,6 +7,8 @@ using namespace std;
 
 void ch01();
 
+void ch02();
+
 #endif
 
 /**

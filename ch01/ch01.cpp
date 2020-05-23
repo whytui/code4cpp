@@ -10,6 +10,9 @@ void ch01()
     scanInput();
 }
 
+/**
+ * 读取键盘输入
+ */
 void scanInput()
 {
     /**
@@ -25,6 +28,9 @@ void scanInput()
     cout << "double类型长度为：" << sizeof(area) << "byte" << endl;
 }
 
+/**
+ * 读取多个输入
+ */
 void scanMultiple()
 {
     /**
@@ -36,6 +42,9 @@ void scanMultiple()
     cout << "平均值=" << (number1 + number2 + number3) / 3;
 }
 
+/**
+ * 获取时间戳
+ */
 void dateDemo()
 {
     /**
@@ -44,6 +53,9 @@ void dateDemo()
     cout << "当前时间戳=" << time(nullptr) << endl;
 }
 
+/**
+ * 随机函数
+ */
 void random()
 {
     /**
@@ -55,4 +67,17 @@ void random()
     {
         printf("第%d次循环，随机值=%d\n", i + 1, rand());
     }
+}
+
+/**
+ * if条件
+ */
+void if_demo()
+{
+    int a = 10;
+    while (a)
+    {
+        a--;
+    }
+    printf("%d \n", a);
 }

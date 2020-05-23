@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <ctime>
+#include <cstdio>
 
 using namespace std;
 
@@ -15,5 +16,7 @@ void scanMultiple();
 void dateDemo();
 
 void random();
+
+void if_demo();
 
 #endif
