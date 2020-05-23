@@ -3,4 +3,4 @@ project(code4cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(code4cpp main.cpp ch01/ch01.cpp ch01/ch01.h main.h)
+add_executable(code4cpp main.cpp ch01/ch01.cpp ch01/ch01.h main.h windows/win.cpp windows/win.h)
