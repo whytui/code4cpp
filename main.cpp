@@ -8,6 +8,6 @@ int main()
     cout << "Hello, World!" << endl;
     cout << "Äã" << "Åä" << "Âğ£¿" << endl;
     cout << 0xFF << endl;
-    thread();
+    start_socket();
     return 0;
 }

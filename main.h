@@ -13,6 +13,8 @@ void ch05();
 
 int thread();
 
+void start_socket();
+
 #endif
 
 /**
