@@ -7,15 +7,7 @@
 #ifndef CODE4CPP_CH02_H
 #define CODE4CPP_CH02_H
 
-#include <cmath>
-#include <cstdio>
-#include <iostream>
-#include <ctime>
 #include <string>
-#include <fstream>
-#include <sstream>
-
-using namespace std;
 
 void ch02();
 
@@ -25,16 +17,10 @@ void char_demo();
 
 void string_demo();
 
-void change_string(string*);
+void change_string(std::string*);
 
-void read_file(const string&);
+void read_file(const std::string&);
 
-void write_file(const string&, const string&);
-
-class ch02
-{
-
-};
-
+void write_file(const std::string&, const std::string&);
 
 #endif //CODE4CPP_CH02_H

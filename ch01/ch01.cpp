@@ -3,7 +3,12 @@
 * 时间：2020/5/23-0:08
 * 作用：
 */
+#include <iostream>
+#include <ctime>
+#include <cstdio>
 #include "ch01.h"
+
+using namespace std;
 
 void ch01()
 {

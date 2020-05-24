@@ -3,13 +3,15 @@
 * 时间：2020/5/23-23:47
 * 作用：
 */
-
+#include <cmath>
+#include <cstdio>
+#include <iostream>
+#include <ctime>
+#include <fstream>
+#include <sstream>
 #include "ch02.h"
 
-void add1(int &a);
-
-void add2(int a);
-
+using namespace std;
 
 void ch02()
 {
@@ -111,7 +113,7 @@ void change_string(string *str)
 
 
 /**
- * 写文件
+ * 读文件
  */
 void read_file(const string &filePath)
 {

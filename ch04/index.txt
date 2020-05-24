@@ -1,0 +1,5 @@
+类和对象
+
+定义class；
+定义struct；
+typedef使用；

@@ -1,13 +1,17 @@
 #ifndef CODE4CPP_MAIN_H
 #define CODE4CPP_MAIN_H
 
-#include <iostream>
-
-using namespace std;
-
 void ch01();
 
 void ch02();
+
+void ch03();
+
+void ch04();
+
+void ch05();
+
+int thread();
 
 #endif
 
