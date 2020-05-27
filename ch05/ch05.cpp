@@ -17,16 +17,18 @@ void ch05()
     auto *student = new Student("刘时明", Men);
     student->show();
 
-    auto *stack = new Stack();
-    for (int i = 0; i < 5; ++i)
-    {
-        stack->push(i * 10);
-    }
-    cout << stack->peek() << endl;
-    cout << stack->get_size() << endl;
+    Stack<int> stack;
 
-    while (!stack->is_empty())
+    for (int i = 0; i < 50; ++i)
     {
-        cout << "弹出一个=" << stack->pop() << endl;
+        stack.push(i);
+        // stack->push(to_string(i));
+    }
+    cout << stack.peek() << endl;
+    cout << stack.get_size() << endl;
+    while (!stack.is_empty())
+    {
+
+        cout << "弹出一个=" << stack.pop() << endl;
     }
 }

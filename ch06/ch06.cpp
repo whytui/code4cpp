@@ -1,9 +1,122 @@
 /*
-* ä½œè€…ï¼šåˆ˜æ—¶æ˜
-* æ—¶é—´ï¼š2020/5/24-19:38
-* ä½œç”¨ï¼š
+* ×÷Õß£ºÁõÊ±Ã÷
+* Ê±¼ä£º2020/5/24-19:38
+* ×÷ÓÃ£º
 */
-
+#include <iostream>
 #include "ch06.h"
 
+using namespace std;
 
+/**
+ * C++º¯ÊıÖ§³ÖÄ¬ÈÏ²ÎÊı£¬¶øÇÒ±ØĞëÔÚÄ©Î²Î»ÖÃ£¬ÇÒ¿ÉÒÔ¶¨Òå¶à¸ö
+ * @param args
+ */
+int default_args(int lastArgs, int args1 = 1, int args2 = 1)
+{
+    return lastArgs + args1 + args2;
+}
+
+void ch06()
+{
+//    cout << default_args(10) << endl;
+//    cout << default_args(10, 5) << endl;
+//    cout << default_args(10, 10, 10) << endl;
+    point();
+    int arr[] = {1, 2, 3};
+    arr_point(arr);
+
+    int *a = reverse(arr, 3);
+    cout << a << endl;
+    delete[] a;
+
+    func_point();
+}
+
+void point()
+{
+    int p = 10;
+    string str = "hello!!!";
+    cout << sizeof(p) << endl;
+    // boolÖ¸ÕëÖ»Õ¼1¸ö×Ö½Ú£¬shortÖ¸ÕëÖ»Õ¼2¸ö×Ö½Ú
+    cout << "boolÖ¸Õë=" << sizeof(bool) << endl;
+    cout << "shortÖ¸Õë=" << sizeof(short) << endl;
+    cout << "intÖ¸Õë=" << sizeof(int) << endl;
+    cout << "longÖ¸Õë=" << sizeof(long) << endl;
+    cout << sizeof(&p) << endl;
+    cout << sizeof(str) << endl;
+    cout << sizeof(&str) << endl;
+
+    // ³£Á¿Ö¸ÕëÖ¸ÏòÒ»¸ö²»±íµÄÄÚÈİµØÖ·£¬¸ÃµØÖ·Êµ¼ÊµÄÖµÊÇ¿ÉÒÔ¸Ä±äµÄ
+    const int *cp;
+    cp = &p;
+    cout << "cp=" << *cp << endl;
+    p = 20;
+    cout << "cp=" << *cp << endl;
+}
+
+void arr_point(int *p)
+{
+    /**
+     * C++Ö¸ÕëÔËËãÖ»Ö§³Ö¹ØÏµºÍ¼Ó¼õÔËËã
+     * Ö¸Õë¼Ó¼õÔËËãÊµÖÊÊÇµØÖ·Æ«ÒÆ£¬Æ«ÒÆ´óĞ¡ÎªÔËËã=ÊıÖµ*ÀàĞÍÕ¼ÓÃ×Ö½ÚÊı
+     */
+    cout << "µÚÈı¸öÔªËØ=" << *(p + 2) << endl;
+    /**
+     * C++ÖĞÊı×éÃûÊµ¼Ê¾ÍÊÇÖ¸ÏòµÚÒ»¸öÔªËØµÄ³£Á¿Ö¸Õë£¬Òò´Ë£¬C++²»Ö§³ÖÊı×éÖØĞÂ¸³Öµ£¬newÉùÃ÷µÄ³ıÍâ
+     */
+    int list[] = {1, 2, 3, 4, 5};
+    if (list == &list[0])
+    {
+        cout << "µØÖ·ÏàµÈ," << list << "," << &list[0] << endl;
+    }
+}
+
+/**
+ * Êı×éÔªËØ·´×ª£¬²¢·µ»ØĞÂÊı×é
+ * @param arr
+ * @param size
+ * @return
+ */
+int *reverse(const int *arr, int size)
+{
+    // Èç¹û²»Ê¹ÓÃnew£¬ÔòÕ»ÉÏ·ÖÅä£¬ÔÚº¯Êı½áÊøÊ±±»»ØÊÕ
+    int *new_arr = new int[size];
+    for (int i = 0, j = size - 1; i < size; ++i, j--)
+    {
+        new_arr[i] = arr[j];
+    }
+    return new_arr;
+}
+
+/**
+ * º¯ÊıÈë¿ÚÊÇÒ»¸öÖ¸Õë
+ * @param a
+ * @param b
+ * @return
+ */
+int (*fp)(int a, int b);
+
+int max(int a, int b)
+{
+    return a > b ? a : b;
+}
+
+int min(int a, int b)
+{
+    return a > b ? b : a;
+}
+
+/**
+ * º¯ÊıÖ¸Õë£¬Ò»ÖÖÌØÊâµÄÖ¸Õë£¬ËüÖ¸Ïòº¯ÊıµÄÈë¿Ú
+ * Ö¸Õëº¯Êı£¬·µ»ØÖµÊÇÖ¸ÕëÀàĞÍ£¬ÀıÈç*reverseº¯Êı
+ */
+void func_point()
+{
+    // º¯ÊıÖ¸ÕëfÖ¸ÏòÇó×î´óÖµµÄº¯Êımax
+    fp = max;
+    cout << "max=" << (*fp)(1, 2) << endl;
+    // º¯ÊıÖ¸ÕëfÖ¸ÏòÇó×îĞ¡ÖµµÄº¯Êımin
+    fp = min;
+    cout << "min=" << (*fp)(1, 2) << endl;
+}
