@@ -28,7 +28,6 @@ void ch05()
     cout << stack.get_size() << endl;
     while (!stack.is_empty())
     {
-
         cout << "µ¯³öÒ»¸ö=" << stack.pop() << endl;
     }
 }

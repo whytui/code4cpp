@@ -23,6 +23,8 @@ private:
 public:
     Stack();
 
+    ~Stack();
+
 public:
     int get_size() const;
 
@@ -39,9 +41,14 @@ template<typename T>
 Stack<T>::Stack()
 {
     size = 0;
-    index = 0;
     cap = 10;
     data = new int[cap];
+}
+
+template<typename T>
+Stack<T>::~Stack()
+{
+    delete[] data;
 }
 
 template<typename T>
@@ -57,8 +64,7 @@ void Stack<T>::push(T ele)
     {
         expandCapacity();
     }
-    data[index++] = ele;
-    size++;
+    data[size++] = ele;
 }
 
 /**
@@ -67,34 +73,26 @@ void Stack<T>::push(T ele)
 template<typename T>
 void Stack<T>::expandCapacity()
 {
-    int *temp = new int[cap * 2];
+    T *old = data;
+    data = new T[cap * 2];
     for (int i = 0; i < size; ++i)
     {
-        temp[i] = data[i];
+        data[i] = old[i];
     }
-    delete[] data;
-    data = temp;
+    delete[] old;
     this->cap *= 2;
 }
 
 template<typename T>
 T Stack<T>::peek()
 {
-    return data[index - 1];
+    return data[size - 1];
 }
 
 template<typename T>
 T Stack<T>::pop()
 {
-    if (size == 0)
-    {
-        // 抛出异常
-        return NULL;
-    } else
-    {
-        size--;
-        return data[--index];
-    }
+    return data[--size];
 }
 
 template<typename T>
