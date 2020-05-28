@@ -47,7 +47,6 @@ typedef Book Circle;
  * 1.默认成员权限区别，前者public，后者private；
  * 2.默认继承方式，前者public，后者private；
  * 3.前者可以定义模板参数，后者不行；
- * 4.前者访问成员使用->，后者使用.；
  *
  * C++中struct是对C语言实现的扩展，本质上大体与class相同
  */
