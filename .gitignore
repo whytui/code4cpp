@@ -5,14 +5,4 @@
 
 *.iml
 
-*.class
-
-*/target/*
-
-/tomcat.8080
-
-*/dist/*
-
-*/node_modules/*
-
 
