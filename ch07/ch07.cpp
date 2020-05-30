@@ -23,7 +23,7 @@ void ch07()
     string dist = R"(C:\Users\Administrator\Desktop\starts\sst\bat\www\fuck\com)";
     string src = R"(C:\Users\Administrator\Desktop\timg_1.png)";
     // copy_file(&dist, &src);
-    // make_dirs(&dist);
+    make_dirs(&dist);
     // copy(&dist, &src);
     v->clear();
     getFiles(R"(C:\Users\Administrator\Desktop)", v);
