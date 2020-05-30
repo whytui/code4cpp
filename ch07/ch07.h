@@ -7,8 +7,9 @@
 #ifndef CODE4CPP_CH07_H
 #define CODE4CPP_CH07_H
 
-#include <iostream>
 using namespace std;
+#include <iostream>
+#include "../utils/utils.h"
 
 void ch07();
 
@@ -16,12 +17,4 @@ void write_file(const string *filePath);
 
 vector<string> *read_file(const string *filePath);
 
-void copy_file(const string *dist,const string *src);
-
-void copy(const string *dist, const string *src);
-
-void make_dirs(const string *dirs);
-
-void getFiles(string path, vector<string> *files);
-
-#endif //CODE4CPP_CH07_H
+#endif

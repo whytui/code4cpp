@@ -29,8 +29,13 @@ void ch06()
     int *a = reverse(arr, 3);
     cout << a << endl;
     delete[] a;
-
     func_point();
+
+    int i1=1;
+    int i2=10;
+    // cout << add(&i1,&i2) << endl;
+
+    cout << add(i1,i2) << endl;
 }
 
 void point()
@@ -119,4 +124,28 @@ void func_point()
     // 函数指针f指向求最小值的函数min
     fp = min;
     cout << "min=" << (*fp)(1, 2) << endl;
+}
+
+
+/**
+ * 下面2个函数参数类型不一致，但效果是一样的
+ * int * 代表参数是指针对象
+ * int & 代表参数是值对象，但实际传递的也是指针
+ */
+
+
+int add(int *a,int *b)
+{
+    // *a++ 与 *a+=1 结果不一致，
+    // 需要使用(*a)++
+    (*a)++;
+    *b+=2;
+    return *a+*b;
+}
+
+int add(int &a,int &b)
+{
+    a++;
+    b+=2;
+    return a+b;
 }

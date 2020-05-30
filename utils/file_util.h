@@ -5,7 +5,16 @@ using namespace std;
 #include <string>
 #include <vector>
 
-void FindFiles(string root, vector<string> &files);
+void file_list(const string &path, vector<string> *files);
 
+vector<string> *file_list(const string &path);
+
+void make_dirs(const string &dirs);
+
+void copy(const string &dist,const string &src);
+
+void copy_file(const string &dist, const string &src);
+
+bool is_dir(const string &path);
 
 #endif //CODE4CPP_FILE_UTIL_H
