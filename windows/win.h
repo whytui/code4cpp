@@ -1,18 +1,16 @@
 #ifndef CODE4CPP_WIN_H
 #define CODE4CPP_WIN_H
 
-#include <windows.h>
-
-class win
+class CMsgTestDlg
 {
 public:
-    
+    void OnClose();
+
+    void OnExec();
+
+    void OnEditWnd();
+
+    void OnGetWnd();
 };
-
-typedef struct Student
-{
-
-} student;
-
 
 #endif //CODE4CPP_WIN_H

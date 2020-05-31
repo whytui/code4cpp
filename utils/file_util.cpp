@@ -129,6 +129,11 @@ void copy_file(const string &dist, const string &src)
     input.close();
 }
 
+/**
+ * 判断指定路径是否为目录
+ * @param path
+ * @return
+ */
 bool is_dir(const string &path)
 {
     DIR *dir=opendir(path.c_str());

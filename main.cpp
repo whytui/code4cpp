@@ -8,6 +8,8 @@ int main()
     cout << "Hello, World!" << endl;
     cout << "Äã" << "Åä" << "Âğ£¿" << endl;
     cout << 0xFF << endl;
-    ch07();
+    ch09();
+    // WinExec("notepad.exe", SW_SHOW);
+    // system(R"(notepad.exe C:\Users\Administrator\Desktop\Dust\Stone.iml)");
     return 0;
 }

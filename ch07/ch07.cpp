@@ -57,21 +57,21 @@ vector<string> *read_file(const string *filePath)
 void obj_stream()
 {
     cout << "ObjDemo size=" << sizeof(ObjDemo) << endl;
-    ObjDemo demo1(23,"lsm");
-    ObjDemo demo2(23,"lw");
+    ObjDemo demo1(23, "lsm");
+    ObjDemo demo2(23, "lw");
 
-    fstream binaryIo("../resource/data",ios::out|ios::binary);
+    fstream binaryIo("../resource/data", ios::out | ios::binary);
     binaryIo.write(reinterpret_cast<char *>(&demo1), sizeof(ObjDemo));
     binaryIo.write(reinterpret_cast<char *>(&demo2), sizeof(ObjDemo));
     binaryIo.close();
 
     ObjDemo newDemo1;
-    binaryIo.open("../resource/data",ios::in|ios::binary);
-    binaryIo.read(reinterpret_cast<char *>(&newDemo1),sizeof(ObjDemo));
+    binaryIo.open("../resource/data", ios::in | ios::binary);
+    binaryIo.read(reinterpret_cast<char *>(&newDemo1), sizeof(ObjDemo));
     cout << newDemo1.getInfo() << endl;
 
     ObjDemo newDemo2;
-    binaryIo.read(reinterpret_cast<char *>(&newDemo2),sizeof(ObjDemo));
+    binaryIo.read(reinterpret_cast<char *>(&newDemo2), sizeof(ObjDemo));
     cout << newDemo2.getInfo() << endl;
 }
 
@@ -80,32 +80,32 @@ void obj_stream()
  */
 void skip_stream()
 {
-    fstream input("../resource/锦瑟.txt",ios::in);
+    fstream input("../resource/锦瑟.txt", ios::in);
     if (input.fail())
     {
         cout << "文件不存在!!!" << endl;
         return;
     }
     char c;
-    int index=0;
-    bool flag= false;
+    int index = 0;
+    bool flag = false;
     while (!input.eof())
     {
         input >> c;
         // 找到 - 的位置
-        if(c=='-')
+        if (c == '-')
         {
-            flag= true;
+            flag = true;
             break;
         }
         index++;
     }
-    if(!flag)
+    if (!flag)
     {
         cout << "找不到标记" << endl;
     }
-    fstream output("../resource/锦瑟.txt",ios::out|ios::in|ios::binary);
-    output.seekp(index+4,ios::beg);
+    fstream output("../resource/锦瑟.txt", ios::out | ios::in | ios::binary);
+    output.seekp(index + 4, ios::beg);
     // 取代占位符
     output << "李商隐";
 }

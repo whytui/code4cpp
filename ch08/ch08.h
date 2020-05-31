@@ -6,11 +6,8 @@
 #ifndef CODE4CPP_CH08_H
 #define CODE4CPP_CH08_H
 
+#include "rational.h"
 
-class ch08
-{
-
-};
-
+void ch08();
 
 #endif //CODE4CPP_CH08_H

@@ -1,7 +1,57 @@
 /*
-* ä½œè€…ï¼šåˆ˜æ—¶æ˜
-* æ—¶é—´ï¼š2020/5/31-0:14
-* ä½œç”¨ï¼š
+* ×÷Õß£ºÁõÊ±Ã÷
+* Ê±¼ä£º2020/5/31-0:14
+* ×÷ÓÃ£º
 */
+#include <string>
+#include <iostream>
 #include "ch08.h"
 
+using namespace std;
+
+void string_operator();
+
+void rational();
+
+void ch08()
+{
+    string_operator();
+
+    rational();
+}
+
+/**
+ * stringÀàĞÍ <¡¢>¡¢+¡¢[]µÈÔËËã·û¶¼ÊÇÍ¨¹ıoperator¹Ø¼ü×ÖÍê³É
+ */
+void string_operator()
+{
+    string s1("ÉÏ°¡");
+    string s2("hello");
+    cout << "first=" << s2[0] << endl;
+    cout << "first=" << s2.operator[](0) << endl;
+    s1.operator+=(s2);
+    cout << s1 << endl;
+}
+
+void rational()
+{
+    auto *r1 = new Rational(1, 2);
+    auto *r2 = new Rational(1, 2);
+    auto r3 = *r1 + *r2;
+    cout << r3.toString() << endl;
+    cout << (r1 < &r3) << endl;
+
+    cout << r3[0] << "," << r3[1] << endl;
+
+    // Í¨¹ıÓÑÔªº¯Êı¸Ä±äË½ÓĞÊôĞÔ
+    change(r3, 7, 8);
+    cout << r3[0] << "," << r3[1] << endl;
+
+    // Íê³É×Ô¶¯ÀàĞÍ×ª»»
+    int intVal = r3;
+    cout << "intVal=" << intVal << endl;
+
+    auto r4 = r3;
+    cout << "eq? " << r4.equals(r3) << endl;
+    printf("%p , %p \n", r3, r4);
+}
