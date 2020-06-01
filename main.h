@@ -21,6 +21,8 @@ void ch08();
 
 void ch09();
 
+void ch10();
+
 int thread();
 
 void start_socket();
