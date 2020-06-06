@@ -7,6 +7,8 @@
 #ifndef CODE4CPP_CH11_H
 #define CODE4CPP_CH11_H
 
+#include <stdio.h>
+
 void ch11();
 
 #endif //CODE4CPP_CH11_H
