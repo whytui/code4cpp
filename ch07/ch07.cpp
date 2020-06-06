@@ -8,9 +8,28 @@
 #include <vector>
 #include "ch07.h"
 
+void back_read();
+
 void ch07()
 {
-    skip_stream();
+    back_read();
+}
+
+void back_read()
+{
+    fstream input("../resource/锦瑟.txt", ios::in);
+    if (input.fail())
+    {
+        cout << "文件不存在!!!" << endl;
+        return;
+    }
+    char c;
+    while (!input.eof())
+    {
+        input.get(c);
+        // input.seekg(-1);
+        cout << c << endl;
+    }
 }
 
 /**

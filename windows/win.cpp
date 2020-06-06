@@ -204,7 +204,7 @@ void CMsgTestDlg::OnExec()
 
 void CMsgTestDlg::OnEditWnd()
 {
-    HWND hWnd = ::FindWindow(nullptr, "无标题 - 记事本");
+    HWND hWnd = FindWindow(nullptr, "无标题 - 记事本");
     if (hWnd == nullptr)
     {
         MessageBox(nullptr, TEXT("没有找到记事本"), TEXT("提示"), MB_OK);
