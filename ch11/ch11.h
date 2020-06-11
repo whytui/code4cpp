@@ -7,7 +7,12 @@
 #ifndef CODE4CPP_CH11_H
 #define CODE4CPP_CH11_H
 
-#include <stdio.h>
+#include <numeric>
+#include <vector>
+#include <string>
+#include <iostream>
+
+using namespace std;
 
 void ch11();
 

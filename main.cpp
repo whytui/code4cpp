@@ -5,9 +5,9 @@ using namespace std;
 
 int main()
 {
-    //cout << "Hello, World!" << endl;
+    cout << "Hello, World!" << endl;
     cout << "Äã" << "Åä" << "Âð£¿" << endl;
-    //cout << 0xFF << endl;
+    cout << 0xFF << endl;
     ch11();
     // WinExec("notepad.exe", SW_SHOW);
     // system(R"(notepad.exe C:\Users\Administrator\Desktop\Dust\Stone.iml)");
