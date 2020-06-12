@@ -3,14 +3,12 @@
 
 #define PI 3.1415926
 
-void scanInput();
+#include <iostream>
+#include <ctime>
+#include <cstdio>
+#include <cmath>
+#include <string>
 
-void scanMultiple();
-
-void dateDemo();
-
-void random();
-
-void if_demo();
+using namespace std;
 
 #endif

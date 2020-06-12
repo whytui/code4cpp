@@ -11,14 +11,6 @@
 
 void ch02();
 
-void math_demo();
-
-void char_demo();
-
-void string_demo();
-
-void change_string(std::string*);
-
 void read_file(const std::string&);
 
 void write_file(const std::string&, const std::string&);
