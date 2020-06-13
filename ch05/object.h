@@ -12,7 +12,14 @@ using namespace std;
 
 class Object
 {
+public:
+    void objectMethod();
+};
 
+class Inf
+{
+public:
+    void infMethod();
 };
 
 enum Gender
@@ -20,7 +27,8 @@ enum Gender
     Men, WoMen
 };
 
-class Student
+// C++支持多继承
+class Student : public Object, public Inf
 {
 public:
     // 不同于Java，静态成员在类定义中不可以初始化

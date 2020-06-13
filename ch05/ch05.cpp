@@ -17,6 +17,9 @@ void ch05()
     auto *student = new Student("ÁõÊ±Ã÷", Men);
     student->show();
 
+    student->infMethod();
+    student->objectMethod();
+
     Stack<int> stack;
 
     for (int i = 0; i < 50; ++i)

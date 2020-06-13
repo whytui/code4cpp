@@ -8,11 +8,13 @@
 #define CODE4CPP_CH02_H
 
 #include <string>
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <utility>
+
+using namespace std;
 
 void ch02();
-
-void read_file(const std::string&);
-
-void write_file(const std::string&, const std::string&);
 
 #endif //CODE4CPP_CH02_H

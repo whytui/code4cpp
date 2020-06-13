@@ -6,7 +6,9 @@
 #ifndef CODE4CPP_CH08_H
 #define CODE4CPP_CH08_H
 
-#include "rational.h"
+#include <iostream>
+
+using namespace std;
 
 void ch08();
 

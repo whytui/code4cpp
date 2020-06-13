@@ -31,3 +31,13 @@ void Student::setName(const string &name)
 {
     Student::name = name;
 }
+
+void Inf::infMethod()
+{
+    cout << "invoke infMethod" << endl;
+}
+
+void Object::objectMethod()
+{
+    cout << "invoke objectMethod" << endl;
+}

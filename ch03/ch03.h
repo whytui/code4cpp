@@ -24,10 +24,6 @@ void change_arr(int[]);
 
 void poker();
 
-void maze(const std::string &path);
-
 void multidimensional_array();
-
-bool set_way(int maps[10][10], int i, int j);
 
 #endif //CODE4CPP_CH03_H
