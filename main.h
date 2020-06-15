@@ -3,6 +3,10 @@
 
 #include "utils/utils.h"
 
+void sort();
+
+void algorithm();
+
 void ch01();
 
 void ch02();

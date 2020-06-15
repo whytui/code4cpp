@@ -5,10 +5,14 @@
 */
 #include "ch11.h"
 
-void findA();
+void accumulateDemo();
+
+void copyDemo();
+
+void collectionDemo();
 
 void ch11()
 {
-    findA();
+    collectionDemo();
 }
 

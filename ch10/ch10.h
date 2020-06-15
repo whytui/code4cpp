@@ -6,6 +6,10 @@
 #ifndef CODE4CPP_CH10_H
 #define CODE4CPP_CH10_H
 
+#include <iostream>
+
+using namespace std;
+
 void ch10();
 
 #endif //CODE4CPP_CH10_H

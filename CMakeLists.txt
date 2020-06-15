@@ -15,13 +15,14 @@ add_executable(code4cpp
         ch04/ch04.h ch04/ch04.cpp ch04/book.cpp ch04/book.h
         ch05/ch05.cpp ch05/ch05.h ch05/object.cpp ch05/object.h ch05/stack.cpp ch05/stack.h
         ch06/ch06.cpp ch06/ch06.h
-        ch07/ch07.cpp ch07/ch07.h ch07/rational.cpp ch07/rational.h
+        ch07/ch07.cpp ch07/ch07.h ch07/rational.cpp ch07/rational.h ch07/operator.cpp
         ch08/ch08.cpp ch08/ch08.h
         ch09/ch09.cpp ch09/ch09.h ch09/geometricObj.cpp ch09/geometricObj.h ch09/deriveCircle.cpp ch09/deriveCircle.h
         ch10/ch10.cpp ch10/ch10.h
-        ch11/ch11.cpp ch11/ch11.h ch11/findA.cpp ch07/operator.cpp
+        ch11/ch11.cpp ch11/ch11.h ch11/accumulate.cpp ch11/copy.cpp ch11/collection.cpp
         windows/win.cpp windows/win.h
         thread/thread.cpp thread/thread.h
         socket/socket.cpp socket/socket.h
         utils/utils.cpp utils/utils.h utils/file_util.cpp utils/file_util.h utils/socket.cpp utils/socket.h
-        windows/key_board.cpp windows/key_board.h)
+        windows/key_board.cpp windows/key_board.h
+        algorithm/sort.cpp algorithm/sort.h algorithm/array_list.h algorithm/list.h algorithm/algorithm.cpp algorithm/algorithm.h algorithm/error.h)
