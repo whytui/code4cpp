@@ -5,25 +5,38 @@
 */
 #include "algorithm.h"
 
+void arrayListDemo();
+
 void algorithm()
 {
-    auto *list = new ArrayList<int>();
+    arrayListDemo();
+}
+
+void arrayListDemo()
+{
+    auto *list = new ArrayList<int>(20);
+
+    ArrayList<int> tempList(5);
+    tempList.empty();
 
     cout << list->size() << endl;
 
     for (int i = 0; i < 100; ++i)
     {
         list->add(i);
+        tempList.add(i);
     }
+    int f = 10000;
+    list->add(2, f);
+    list->remove(2);
 
-    for (int i = 0; i < list->size(); ++i)
+    tempList + *list;
+    for (int i = 0; i < tempList.size(); ++i)
     {
-        cout << list->get(i) << endl;
+        cout << tempList.get(i) << endl;
     }
-
     int find = 50;
-    cout << list->indexOf(find) << endl;
-
+    cout << list->lastIndexOf(find) << endl;
     try
     {
         list->remove(1000);
