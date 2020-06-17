@@ -9,6 +9,7 @@
 #include <bits/stdc++.h>
 #include "list.h"
 #include "error.h"
+#include "algorithm.h"
 
 template<typename T>
 class ArrayList : public List<T>

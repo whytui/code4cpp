@@ -25,4 +25,4 @@ add_executable(code4cpp
         socket/socket.cpp socket/socket.h
         utils/utils.cpp utils/utils.h utils/file_util.cpp utils/file_util.h utils/socket.cpp utils/socket.h
         windows/key_board.cpp windows/key_board.h
-        algorithm/sort.cpp algorithm/sort.h algorithm/array_list.h algorithm/list.h algorithm/algorithm.cpp algorithm/algorithm.h algorithm/error.h algorithm/linked_list.cpp)
+        algorithm/sort.cpp algorithm/sort.h algorithm/array_list.h algorithm/list.h algorithm/algorithm.cpp algorithm/algorithm.h algorithm/error.h algorithm/linked_list.cpp algorithm/one_way_list.cpp algorithm/binary_tree.cpp)

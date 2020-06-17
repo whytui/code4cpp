@@ -8,4 +8,13 @@
 
 #include "array_list.h"
 
+template<typename T>
+class ArrayList;
+
+template<typename T>
+class ChainList;
+
+template<typename K,typename V>
+class BinaryTree;
+
 #endif //CODE4CPP_ALGORITHM_H

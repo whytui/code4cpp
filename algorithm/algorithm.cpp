@@ -7,9 +7,11 @@
 
 void arrayListDemo();
 
+void ChainDemo();
+
 void algorithm()
 {
-    arrayListDemo();
+    ChainDemo();
 }
 
 void arrayListDemo()
@@ -18,6 +20,7 @@ void arrayListDemo()
 
     ArrayList<int> tempList(5);
     tempList.empty();
+    int first=1;
 
     cout << list->size() << endl;
 
@@ -39,6 +42,8 @@ void arrayListDemo()
     cout << list->lastIndexOf(find) << endl;
     try
     {
+        tempList.clear();
+        tempList.add(1,first);
         list->remove(1000);
     } catch (illegalParameterValue v)
     {
