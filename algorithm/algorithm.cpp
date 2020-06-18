@@ -9,9 +9,11 @@ void arrayListDemo();
 
 void ChainDemo();
 
+void BinaryTreeDemo();
+
 void algorithm()
 {
-    ChainDemo();
+    BinaryTreeDemo();
 }
 
 void arrayListDemo()
