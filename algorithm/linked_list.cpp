@@ -1,9 +1,12 @@
 /*
-* ä½œè€…ï¼šåˆ˜æ—¶æ˜Ž
-* æ—¶é—´ï¼š2020/6/16-23:26
-* ä½œç”¨ï¼š
+* ×÷Õß£ºÁõÊ±Ã÷
+* Ê±¼ä£º2020/6/16-23:26
+* ×÷ÓÃ£º
 */
 #include "list.h"
+#include <iostream>
+
+using namespace std;
 
 template<typename T>
 class LinkedNode
@@ -12,6 +15,23 @@ private:
     LinkedNode<T> *prev;
     LinkedNode<T> *next;
     T *data;
+
+    LinkedNode()
+    {
+        LinkedNode(nullptr, nullptr, nullptr);
+    }
+
+    LinkedNode(T &element)
+    {
+        LinkedNode(nullptr, nullptr, element);
+    }
+
+    LinkedNode(LinkedNode<T> *prev,LinkedNode<T> *next,T &element)
+    {
+        this->prev=prev;
+        this->next=next;
+        this-> data= &element;
+    }
 
     template<typename E>
     friend
@@ -24,16 +44,41 @@ class LinkedList : public List<T>
 private:
     LinkedNode<T> *head;
     LinkedNode<T> *tail;
+    int c_size;
 
 public:
+    LinkedList()
+    {
+        this->head= nullptr;
+        this->tail= nullptr;
+        this->c_size = 0;
+    }
+
     void addLast(T *element)
     {
 
     }
 
-    void addFirst(T *element)
+    void addFirst(T &element)
     {
+        if(this->head== nullptr)
+        {
+            this->head =new LinkedNode<T>(nullptr,this->tail,element);
+        } else
+        {
+//            Node<E> newNode = new Node<>(null, null, data);
+//            Node<E> temp = head;
+//            temp.prev = newNode;
+//            newNode.next = temp;
+//            head = newNode;
 
+            auto *newNode= new LinkedNode<T>(element);
+            auto temp=head;
+            temp -> prev= newNode;
+            newNode->next=temp;
+            head = newNode;
+        }
+        this->c_size++;
     }
 
     bool empty() const override
@@ -48,7 +93,8 @@ public:
 
     T &get(int index) override
     {
-        return 0;
+        T *temp=nullptr;
+        return *temp;
     }
 
     int indexOf(T &element) override
@@ -78,6 +124,33 @@ public:
 
     void clear() override
     {
+        auto temp = this->head->next;
+        while(temp != this->tail)
+        {
+            temp = temp->next;
+        }
+        this->head->next = this->tail;
+        this->tail->prev = this->head;
+        this->c_size = 0;
+    }
 
+    void disPlay()
+    {
+        auto temp = this->head;
+        while(temp != nullptr)
+        {
+            cout << temp->data << endl;
+            temp=temp->next;
+        }
     }
 };
+
+void linkedDemo()
+{
+    auto *list=new LinkedList<int>();
+    for (int i = 0; i < 10; ++i)
+    {
+        list->addFirst(i);
+    }
+    list->disPlay();
+}
