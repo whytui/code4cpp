@@ -8,6 +8,8 @@
 
 using namespace std;
 
+void freeDemo();
+
 /**
  * C++函数支持默认参数，而且必须在末尾位置，且可以定义多个
  * @param args
@@ -36,6 +38,8 @@ void ch06()
     // cout << add(&i1,&i2) << endl;
 
     cout << add(i1,i2) << endl;
+
+    freeDemo();
 }
 
 void point()
