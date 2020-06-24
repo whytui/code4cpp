@@ -27,12 +27,11 @@ void freeDemo()
 {
     cout << "*********" << endl;
     // malloc 返回值就是void*类型
-    // 发现传负数会编译报错，但执行正常
-    // man文档关于malloc(0)的解释
+    // 发现传负数会编译报错，但执行正常，
+    // linux man文档关于malloc(0)的解释
     // malloc() allocates size bytes and returns a pointer to the allocated memory.
     // The memory is not cleared. If size is 0, then malloc() returns either NULL,
     // or a unique pointer value that can later be successfully passed to free()
-    // 大概意思就是
     FreeDemo *f1 =(FreeDemo*)malloc(0);
     if(f1 == NULL)
     {

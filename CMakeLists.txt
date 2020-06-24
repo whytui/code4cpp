@@ -14,7 +14,7 @@ add_executable(code4cpp
         ch03/ch03.cpp ch03/ch03.h
         ch04/ch04.h ch04/ch04.cpp ch04/book.cpp ch04/book.h
         ch05/ch05.cpp ch05/ch05.h ch05/object.cpp ch05/object.h ch05/stack.cpp ch05/stack.h
-        ch06/ch06.cpp ch06/ch06.h ch06/free.cpp
+        ch06/ch06.cpp ch06/ch06.h ch06/free.cpp ch06/heap.cpp
         ch07/ch07.cpp ch07/ch07.h ch07/rational.cpp ch07/rational.h ch07/operator.cpp
         ch08/ch08.cpp ch08/ch08.h
         ch09/ch09.cpp ch09/ch09.h ch09/geometricObj.cpp ch09/geometricObj.h ch09/deriveCircle.cpp ch09/deriveCircle.h
