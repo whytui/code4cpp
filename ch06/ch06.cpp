@@ -12,6 +12,8 @@ void freeDemo();
 
 void memory_alignment();
 
+void ptr_demo();
+
 /**
  * C++函数支持默认参数，而且必须在末尾位置，且可以定义多个
  * @param args
@@ -23,25 +25,18 @@ int default_args(int lastArgs, int args1 = 1, int args2 = 1)
 
 void ch06()
 {
-//    cout << default_args(10) << endl;
-//    cout << default_args(10, 5) << endl;
-//    cout << default_args(10, 10, 10) << endl;
-    point();
-    int arr[] = {1, 2, 3};
-    arr_point(arr);
+//    point();
+//    int arr[] = {1, 2, 3};
+//    arr_point(arr);
+//
+//    int *a = reverse(arr, 3);
+//    cout << a << endl;
+//    delete[] a;
+//    func_point();
+//
+//    memory_alignment();
 
-    int *a = reverse(arr, 3);
-    cout << a << endl;
-    delete[] a;
-    func_point();
-
-    int i1=1;
-    int i2=10;
-    // cout << add(&i1,&i2) << endl;
-
-    cout << add(i1,i2) << endl;
-
-    memory_alignment();
+    ptr_demo();
 }
 
 void point()
