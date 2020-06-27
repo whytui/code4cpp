@@ -5,6 +5,17 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 
+# mysql连接头文件
+set(INC_DIR D:\\mysql-c\\include)
+# mysql连接库路径
+set(LINK_DIR D:\\mysql-c\\lib)
+
+#引入头文件
+include_directories(${INC_DIR})
+#引入库文件
+link_directories(${LINK_DIR})
+link_libraries(libmysql)
+
 link_libraries(ws2_32)
 
 add_executable(code4cpp
@@ -14,7 +25,7 @@ add_executable(code4cpp
         ch03/ch03.cpp ch03/ch03.h
         ch04/ch04.h ch04/ch04.cpp ch04/book.cpp ch04/book.h
         ch05/ch05.cpp ch05/ch05.h ch05/object.cpp ch05/object.h ch05/stack.cpp ch05/stack.h
-        ch06/ch06.cpp ch06/ch06.h ch06/free.cpp ch06/heap.cpp
+        ch06/ch06.cpp ch06/ch06.h ch06/free.cpp ch06/heap.cpp ch06/ptr.cpp
         ch07/ch07.cpp ch07/ch07.h ch07/rational.cpp ch07/rational.h ch07/operator.cpp
         ch08/ch08.cpp ch08/ch08.h
         ch09/ch09.cpp ch09/ch09.h ch09/geometricObj.cpp ch09/geometricObj.h ch09/deriveCircle.cpp ch09/deriveCircle.h
@@ -25,4 +36,6 @@ add_executable(code4cpp
         socket/socket.cpp socket/socket.h
         utils/utils.cpp utils/utils.h utils/file_util.cpp utils/file_util.h utils/socket.cpp utils/socket.h
         windows/key_board.cpp windows/key_board.h
-        algorithm/sort.cpp algorithm/sort.h algorithm/array_list.h algorithm/list.h algorithm/algorithm.cpp algorithm/algorithm.h algorithm/error.h algorithm/linked_list.cpp algorithm/one_way_list.cpp algorithm/binary_tree.cpp ch06/ptr.cpp)
+        algorithm/sort.cpp algorithm/sort.h algorithm/array_list.h algorithm/list.h algorithm/algorithm.cpp algorithm/algorithm.h algorithm/error.h algorithm/linked_list.cpp algorithm/one_way_list.cpp algorithm/binary_tree.cpp ch12/ch12.cpp ch12/ch12.h ch12/curd.cpp)
+
+target_link_libraries(code4cpp libmysql)
