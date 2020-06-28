@@ -11,9 +11,10 @@
 1. 设置页面编码为GBK；
 2. 设置页面编码为UTF8，同时操作系统编码也设置为UTF8；
 
-### 关于配置
-1. MySQL需要在CMakeLists.txt文件指定库文件路径
-
+#### 分支
+1. master 基础的通用知识
+2. win32 windows32平台相关
+3. linux linux平台相关
 
 ### 目录说明
 1. ch01 基本API
@@ -27,4 +28,3 @@
 9. ch09 多态
 10. ch10 异常处理
 11. ch11 STL标准模板库
-12. ch12 连接MySQL

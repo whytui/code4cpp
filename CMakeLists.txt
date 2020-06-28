@@ -5,17 +5,6 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 
-# mysql连接头文件
-set(INC_DIR D:\\mysql-c\\include)
-# mysql连接库路径
-set(LINK_DIR D:\\mysql-c\\lib)
-
-#引入头文件
-include_directories(${INC_DIR})
-#引入库文件
-link_directories(${LINK_DIR})
-link_libraries(libmysql)
-
 link_libraries(ws2_32)
 
 add_executable(code4cpp
@@ -36,6 +25,4 @@ add_executable(code4cpp
         socket/socket.cpp socket/socket.h
         utils/utils.cpp utils/utils.h utils/file_util.cpp utils/file_util.h utils/socket.cpp utils/socket.h
         windows/key_board.cpp windows/key_board.h
-        algorithm/sort.cpp algorithm/sort.h algorithm/array_list.h algorithm/list.h algorithm/algorithm.cpp algorithm/algorithm.h algorithm/error.h algorithm/linked_list.cpp algorithm/one_way_list.cpp algorithm/binary_tree.cpp ch12/ch12.cpp ch12/ch12.h ch12/curd.cpp)
-
-target_link_libraries(code4cpp libmysql)
+        algorithm/sort.cpp algorithm/sort.h algorithm/array_list.h algorithm/list.h algorithm/algorithm.cpp algorithm/algorithm.h algorithm/error.h algorithm/linked_list.cpp algorithm/one_way_list.cpp algorithm/binary_tree.cpp)

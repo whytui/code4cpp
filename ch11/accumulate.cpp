@@ -57,7 +57,7 @@ T product(T a[], int n)
 template<typename E>
 struct customFunc : public binary_function<E, E, E>
 {
-    _GLIBCXX14_CONSTEXPR
+    // _GLIBCXX14_CONSTEXPR
     E
     // prev 代表上一次的元素，第一次为指定的初始值
     // item 代表当前元素
