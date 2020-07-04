@@ -3,17 +3,13 @@
 * 时间：2020/5/24-7:02
 * 作用：
 */
-#include <iostream>
-#include <fstream>
 #include "ch03.h"
-
-using namespace std;
 
 void ch03()
 {
-    poker();
+    // point_and_arr();
 
-    multidimensional_array();
+    dynamic_array();
 }
 
 void avg_demo()

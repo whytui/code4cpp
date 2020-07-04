@@ -11,7 +11,7 @@
 #include "socket.h"
 
 // vc++
-// #pragma comment(lib, "ws2_32.lib")
+#pragma comment(lib, "ws2_32.lib")
 
 #define PORT 8888
 

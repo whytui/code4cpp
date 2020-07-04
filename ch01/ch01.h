@@ -11,4 +11,6 @@
 
 using namespace std;
 
+void char_arr_string();
+
 #endif

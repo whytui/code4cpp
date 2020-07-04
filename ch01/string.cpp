@@ -77,3 +77,11 @@ void change_string(string *str)
 {
     (*str).append(" end");
 }
+
+void char_arr_string()
+{
+    char c[] = "hello";
+    string str = "hello";
+    cout << c << endl;
+    cout << str.c_str() << endl;
+}

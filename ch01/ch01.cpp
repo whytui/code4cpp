@@ -25,5 +25,6 @@ void string_demo();
 
 void ch01()
 {
-    readStdInput3();
+    // readStdInput3();
+    char_arr_string();
 }
