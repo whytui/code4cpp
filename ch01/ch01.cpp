@@ -23,8 +23,52 @@ void char_demo();
 
 void string_demo();
 
+/**
+ * 普通内联函数
+ */
+inline void inline_func1()
+{
+    cout << "这是一个内联函数" << endl;
+}
+
+/**
+ * 普通内联函数
+ */
+inline int inline_func2(int number)
+{
+    cout << "这是一个内联函数" << endl;
+    return number % 2;
+}
+
+/**
+ * 结构体内联函数
+ */
+struct InLineDemo
+{
+private:
+    int number;
+
+public:
+    inline void inline_func()
+    {
+        cout << this->number++ << endl;
+        cout << "这是一个内联函数" << endl;
+    }
+};
+
 void ch01()
 {
     // readStdInput3();
-    char_arr_string();
+    // char_arr_string();
+
+//    inline_func1();
+//    cout << inline_func2(1) << endl;
+//    InLineDemo demo{};
+//    demo.inline_func();
+//
+//    char_arr_string();
+//
+//    readLine();
+
+    string_base_opt();
 }

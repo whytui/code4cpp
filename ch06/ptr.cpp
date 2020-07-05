@@ -3,6 +3,9 @@
 
 using namespace std;
 
+/**
+ * ÖÇÄÜÖ¸Õë
+ */
 void ptr_demo()
 {
     shared_ptr<int> p1;

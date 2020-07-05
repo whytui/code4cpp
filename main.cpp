@@ -8,6 +8,6 @@ int main()
     cout << "Hello, World!" << endl;
     cout << "Äã" << "Åä" << "Âğ£¿" << endl;
     cout << 0xFF << endl;
-    ch01();
+    ch08();
     return 0;
 }

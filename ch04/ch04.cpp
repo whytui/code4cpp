@@ -20,4 +20,8 @@ void ch04()
     Hello h = {14};
     h.id += 1;
     cout << "show=" << h.show() << endl;
+
+    union_demo();
+
+    enum_demo();
 }

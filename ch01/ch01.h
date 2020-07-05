@@ -7,10 +7,12 @@
 #include <ctime>
 #include <cstdio>
 #include <cmath>
-#include <string>
+#include <cstring>
 
 using namespace std;
 
 void char_arr_string();
+
+void string_base_opt();
 
 #endif

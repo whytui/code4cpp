@@ -1,8 +1,9 @@
 #include "ch03.h"
 
+int overall[10];
 
 /**
-* 不初始化的话，数组值是不可预测的，如下：
+* 不初始化的话，数组值是不可预测的（全局则均为默认值），如下：
 * int arr[];
 * new int[len];
 */
@@ -19,6 +20,7 @@ void point_and_arr()
 
     for (int i = 0; i < 10; ++i)
     {
+        cout << "overall ->" << overall[i] << endl;
         cout << "p ->" << *(p + i) << endl;
 
         cout << "arr1 ->" << arr1[i] << endl;

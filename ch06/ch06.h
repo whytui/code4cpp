@@ -19,6 +19,8 @@ int *reverse(const int *arr, int size);
 
 void func_point();
 
+void func_point2();
+
 int max(int a, int b);
 
 int min(int a, int b);

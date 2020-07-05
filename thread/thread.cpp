@@ -4,7 +4,6 @@
 * ×÷ÓÃ£º
 */
 #include <iostream>
-#include <cstdlib>
 #include <windows.h>
 #include "thread.h"
 

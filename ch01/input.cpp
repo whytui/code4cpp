@@ -41,6 +41,13 @@ void readLine()
 {
     // 读取一行，回车符为结束
     string str;
-    getline(cin,str,'\n');
+    cout << "输入一行" << endl;
+    getline(cin, str, '\n');
+    cout << "再输入一行" << endl;
+    char buff[5];
+    // 如果输入的字符串大于长度，则多余的会被舍弃
+    cin.getline(buff, 5);
+    cout << "输入如下：" << endl;
     cout << "你输入的是=" << str << endl;
+    cout << "你输入的是=" << buff << endl;
 }

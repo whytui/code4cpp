@@ -17,6 +17,8 @@ void ch08()
     hello(3.14F);
 
     hello('1');
+
+    spaces_demo();
 }
 
 /**

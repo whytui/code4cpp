@@ -7,7 +7,7 @@
 
 void ch03()
 {
-    // point_and_arr();
+    point_and_arr();
 
     dynamic_array();
 }

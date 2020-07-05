@@ -84,4 +84,42 @@ void char_arr_string()
     string str = "hello";
     cout << c << endl;
     cout << str.c_str() << endl;
+
+    // 由于字符串以 '\0' 结尾，所以实际最大长度会减一
+    char maxLen[5] = "hell";
+    char *pointStr = (char *) "hello world";
+
+    cout << *(pointStr + 1) << endl;
+    // *(pointStr + 1) = '2';
+    cout << pointStr << endl;
+    pointStr = maxLen;
+    cout << *pointStr << endl;
+}
+
+void string_base_opt()
+{
+    char str1[10] = "hello";
+    char str2[10];
+    // 将str1的值复制给str1
+    strcpy(str2, str1);
+
+    cout << str2 << endl;
+
+
+    float pi = 3.14F;
+    // 数值转字符串
+    string str = to_string(pi);
+    // 字符串转浮点型
+    double pi_d = atof(str.c_str());
+    cout << pi_d << endl;
+    cout << atoi(str.c_str()) << endl;
+
+    // 比较字符串内容是否相等
+    if (!strcmp(str1, str2))
+    {
+        cout << "str1 == str2" << endl;
+    } else
+    {
+        cout << "str1 != str2" << endl;
+    }
 }

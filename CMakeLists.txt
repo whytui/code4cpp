@@ -13,11 +13,11 @@ add_executable(code4cpp
         ch01/ch01.cpp ch01/ch01.h ch01/input.cpp ch01/date.cpp ch01/random.cpp ch01/math.cpp ch01/string.cpp
         ch02/ch02.cpp ch02/ch02.h ch02/maze.cpp ch02/read.cpp ch02/write.cpp
         ch03/ch03.cpp ch03/ch03.h ch03/point_arr.cpp ch03/dynamic_array.cpp
-        ch04/ch04.h ch04/ch04.cpp ch04/book.cpp ch04/book.h
+        ch04/ch04.h ch04/ch04.cpp ch04/book.cpp ch04/book.h ch04/union.cpp ch04/enum.cpp
         ch05/ch05.cpp ch05/ch05.h ch05/object.cpp ch05/object.h ch05/stack.cpp ch05/stack.h
-        ch06/ch06.cpp ch06/ch06.h ch06/free.cpp ch06/heap.cpp ch06/ptr.cpp
+        ch06/ch06.cpp ch06/ch06.h ch06/free.cpp ch06/heap.cpp ch06/ptr.cpp ch06/func.cpp
         ch07/ch07.cpp ch07/ch07.h ch07/rational.cpp ch07/rational.h ch07/operator.cpp
-        ch08/ch08.cpp ch08/ch08.h
+        ch08/ch08.cpp ch08/ch08.h ch08/spaces.cpp
         ch09/ch09.cpp ch09/ch09.h ch09/geometricObj.cpp ch09/geometricObj.h ch09/deriveCircle.cpp ch09/deriveCircle.h
         ch10/ch10.cpp ch10/ch10.h
         ch11/ch11.cpp ch11/ch11.h ch11/accumulate.cpp ch11/copy.cpp ch11/collection.cpp

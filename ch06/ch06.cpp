@@ -23,6 +23,21 @@ int default_args(int lastArgs, int args1 = 1, int args2 = 1)
     return lastArgs + args1 + args2;
 }
 
+void ptr_demo2()
+{
+    char *c = (char *) "hello";
+    c++;
+    cout << *(c + 1) << endl;
+    cout << c << endl;
+    // c[1] = '1';
+    // *(c + 1) = '1';
+
+    char arr[10] = "what?";
+    char *temp = arr;
+    *(temp + 1) = 'H';
+    cout << arr << endl;
+}
+
 void ch06()
 {
 //    point();
@@ -37,6 +52,10 @@ void ch06()
 //    memory_alignment();
 
     ptr_demo();
+
+    ptr_demo2();
+
+    func_point2();
 }
 
 void point()
@@ -135,18 +154,18 @@ void func_point()
  */
 
 
-int add(int *a,int *b)
+int add(int *a, int *b)
 {
     // *a++ 与 *a+=1 结果不一致，
     // 需要使用(*a)++
     (*a)++;
-    *b+=2;
-    return *a+*b;
+    *b += 2;
+    return *a + *b;
 }
 
-int add(int &a,int &b)
+int add(int &a, int &b)
 {
     a++;
-    b+=2;
-    return a+b;
+    b += 2;
+    return a + b;
 }

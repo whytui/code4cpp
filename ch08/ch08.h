@@ -12,4 +12,6 @@ using namespace std;
 
 void ch08();
 
+void spaces_demo();
+
 #endif //CODE4CPP_CH08_H
