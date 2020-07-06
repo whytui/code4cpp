@@ -96,20 +96,22 @@ void char_arr_string()
     cout << *pointStr << endl;
 }
 
+/**
+ * 字符串基本常用操作
+ */
 void string_base_opt()
 {
     char str1[10] = "hello";
     char str2[10];
     // 将str1的值复制给str1
     strcpy(str2, str1);
-
     cout << str2 << endl;
 
 
     float pi = 3.14F;
     // 数值转字符串
     string str = to_string(pi);
-    // 字符串转浮点型
+    // 字符串转数值
     double pi_d = atof(str.c_str());
     cout << pi_d << endl;
     cout << atoi(str.c_str()) << endl;
@@ -121,5 +123,25 @@ void string_base_opt()
     } else
     {
         cout << "str1 != str2" << endl;
+    }
+
+    // 字符串格式化
+    char forMate[1];
+    int result = sprintf(forMate, "%s%.4f", str2, pi);
+    cout << "result=" << result << endl;
+    cout << forMate << endl;
+
+    // GBK编码下遍历包括中文的字符
+    char *c = (char *) "hello,你好";
+    for (int i = 0; i < strlen(c); ++i)
+    {
+        if (c[i] > 0)
+        {
+            printf("%c \n", c[i]);
+        } else
+        {
+            printf("%c%c \n", c[i], c[i + 1]);
+            i++;
+        }
     }
 }
