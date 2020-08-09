@@ -1,5 +1,3 @@
-using namespace std;
-
 #include <dirent.h>
 #include <cstring>
 #include <fstream>
