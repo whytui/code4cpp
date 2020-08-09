@@ -7,12 +7,12 @@ struct FreeDemo
 public:
     FreeDemo()
     {
-        cout << "FreeDemo ¹¹Ôìº¯Êý" << endl;
+        cout << "FreeDemo æž„é€ å‡½æ•°" << endl;
     }
 
     ~FreeDemo()
     {
-        cout << "FreeDemo Îö¹¹º¯Êý" << endl;
+        cout << "FreeDemo æžæž„å‡½æ•°" << endl;
     }
 
     void test()
@@ -26,16 +26,16 @@ public:
 void freeDemo()
 {
     cout << "*********" << endl;
-    // malloc ·µ»ØÖµ¾ÍÊÇvoid*ÀàÐÍ
-    // ·¢ÏÖ´«¸ºÊý»á±àÒë±¨´í£¬µ«Ö´ÐÐÕý³££¬
-    // linux manÎÄµµ¹ØÓÚmalloc(0)µÄ½âÊÍ
+    // malloc è¿”å›žå€¼å°±æ˜¯void*ç±»åž‹
+    // å‘çŽ°ä¼ è´Ÿæ•°ä¼šç¼–è¯‘æŠ¥é”™ï¼Œä½†æ‰§è¡Œæ­£å¸¸ï¼Œ
+    // linux manæ–‡æ¡£å…³äºŽmalloc(0)çš„è§£é‡Š
     // malloc() allocates size bytes and returns a pointer to the allocated memory.
     // The memory is not cleared. If size is 0, then malloc() returns either NULL,
     // or a unique pointer value that can later be successfully passed to free()
     FreeDemo *f1 =(FreeDemo*)malloc(0);
     if(f1 == NULL)
     {
-        cout << "¿ÕÖµ" << endl;
+        cout << "ç©ºå€¼" << endl;
     }
     // FreeDemo *f1 =(FreeDemo*)malloc(sizeof(FreeDemo*));
     f1->test();
@@ -44,7 +44,7 @@ void freeDemo()
     FreeDemo *f2=new FreeDemo();
     f2->test();
     delete(f2);
-    // ´ËÊ±·ÃÎÊf1¡¢f2½á¹ûÕý³££¬delete¡¢freeÖ»ÊÇÍ¨Öª²Ù×÷ÏµÍ³´ËÄÚ´æ¿ÉÒÔ±»»ØÊÕ
+    // æ­¤æ—¶è®¿é—®f1ã€f2ç»“æžœæ­£å¸¸ï¼Œdeleteã€freeåªæ˜¯é€šçŸ¥æ“ä½œç³»ç»Ÿæ­¤å†…å­˜å¯ä»¥è¢«å›žæ”¶
     f1->test();
     f2->test();
 }

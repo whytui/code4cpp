@@ -1,8 +1,3 @@
-/*
-* 作者：刘时明
-* 时间：2020/6/14-23:28
-* 作用：ArrayList 基于数组的线性表
-*/
 #ifndef CODE4CPP_ARRAY_LIST_H
 #define CODE4CPP_ARRAY_LIST_H
 
@@ -60,7 +55,7 @@ public:
     {
         if (index < 0 || index > this->c_size)
         {
-            throw illegalParameterValue((char *) "索引越界");
+            throw illegalParameterValue((char *) "???????");
         }
         if (this->c_size >= this->cap)
         {
@@ -104,7 +99,7 @@ void ArrayList<T>::expandCapacity(int newCap)
 {
     if (newCap < this->c_size)
     {
-        throw illegalParameterValue((char *) "扩容大小不可以小于当前大小");
+        throw illegalParameterValue((char *) "?????小??????小??????小");
     }
     T *temp = new T[newCap];
     copy(this->data, this->data + this->c_size, temp);
@@ -150,7 +145,7 @@ void ArrayList<T>::checkIndex(int index)
 {
     if (index < 0 || index >= this->c_size)
     {
-        throw illegalParameterValue((char *) "索引越界");
+        throw illegalParameterValue((char *) "???????");
     }
 }
 

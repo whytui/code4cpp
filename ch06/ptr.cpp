@@ -4,7 +4,7 @@
 using namespace std;
 
 /**
- * ÖÇÄÜÖ¸Õë
+ * æ™ºèƒ½æŒ‡é’ˆ
  */
 void ptr_demo()
 {
@@ -18,6 +18,6 @@ void ptr_demo()
     cout << "p1=" << p1 << endl;
     if (p1)
     {
-        cout << "Ã»ÓĞ³õÊ¼Öµ" << endl;
+        cout << "æ²¡æœ‰åˆå§‹å€¼" << endl;
     }
 }

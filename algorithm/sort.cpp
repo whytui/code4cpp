@@ -1,7 +1,7 @@
 /*
-* ×÷Õß£ºÁõÊ±Ã÷
-* Ê±¼ä£º2020/6/14-23:10
-* ×÷ÓÃ£º
+* ä½œè€…ï¼šåˆ˜æ—¶æ˜
+* æ—¶é—´ï¼š2020/6/14-23:10
+* ä½œç”¨ï¼š
 */
 #include "sort.h"
 
@@ -13,7 +13,7 @@ void quickSort(int *arr, int size);
 
 inline int cmp(int a, int b)
 {
-    // µ¹Ğò
+    // å€’åº
     return b - a;
 }
 
@@ -29,7 +29,7 @@ void sort()
 }
 
 /**
- * Ã°ÅİÅÅĞò
+ * å†’æ³¡æ’åº
  * @param arr
  * @param size
  */
@@ -48,7 +48,7 @@ void bubbleSort(int *arr, int size)
 }
 
 /**
- * Ñ¡ÔñÅÅĞò
+ * é€‰æ‹©æ’åº
  * @param arr
  * @param size
  */
@@ -97,7 +97,7 @@ void quickSort(int *arr, int start, int end)
 }
 
 /**
- * ¿ìËÙÅÅĞò
+ * å¿«é€Ÿæ’åº
  * @param arr
  * @param size
  */

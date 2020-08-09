@@ -5,11 +5,6 @@
 */
 #include "socket.h"
 
-Socket::Socket()
-{
-    Socket("127.0.0.1",8080);
-}
-
 Socket::Socket(string adders, int port)
 {
 

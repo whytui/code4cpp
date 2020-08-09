@@ -16,9 +16,7 @@ private:
     V value;
 
 public:
-    BinTreeNode()
-    {
-    }
+    BinTreeNode() = default;
 
     BinTreeNode(K key, V value)
     {
@@ -108,7 +106,7 @@ public:
 
 void BinaryTreeDemo()
 {
-    BinaryTree<int, int> *tree = new BinaryTree<int, int>();
+    auto *tree = new BinaryTree<int, int>();
     tree->insert(1, 4);
     tree->insert(2, 8);
     cout << tree->size() << endl;

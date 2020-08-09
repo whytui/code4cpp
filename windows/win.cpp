@@ -3,7 +3,7 @@
 #include "win.h"
 #include "key_board.h"
 
-#define CLASSNAME "´°¿Ú"
+#define CLASSNAME "çª—å£"
 //  #pragma comment (lib, "User32.lib")
 
 LRESULT CALLBACK WindowProc(
@@ -21,11 +21,11 @@ int show_frame(HINSTANCE hInstance);
 void exec_notepad();
 
 /**
- * WinMain ÊÇwindows´°¿ÚÓ¦ÓÃµÄÖ÷º¯Êı
- * @param hInstance Ó¦ÓÃ³ÌĞòÊµÀı¾ä±ú
- * @param hPrevInstance Í¬Ò»¸öÎÄ¼ş´´½¨µÄÉÏÒ»¸öÊµÀıµÄ¾ä±ú£¬win16µÄÒÅÁô£¬win32ÆúÓÃ
- * @param lpCmdLine Ö÷º¯ÊıÃüÁîĞĞ²ÎÊı
- * @param nCmdShow ½ø³ÌÏÔÊ¾·½Ê½£¬×î´ó»¯¡¢×îĞ¡»¯¡¢Òş²ØµÈ
+ * WinMain æ˜¯windowsçª—å£åº”ç”¨çš„ä¸»å‡½æ•°
+ * @param hInstance åº”ç”¨ç¨‹åºå®ä¾‹å¥æŸ„
+ * @param hPrevInstance åŒä¸€ä¸ªæ–‡ä»¶åˆ›å»ºçš„ä¸Šä¸€ä¸ªå®ä¾‹çš„å¥æŸ„ï¼Œwin16çš„é—ç•™ï¼Œwin32å¼ƒç”¨
+ * @param lpCmdLine ä¸»å‡½æ•°å‘½ä»¤è¡Œå‚æ•°
+ * @param nCmdShow è¿›ç¨‹æ˜¾ç¤ºæ–¹å¼ï¼Œæœ€å¤§åŒ–ã€æœ€å°åŒ–ã€éšè—ç­‰
  * @return
  */
 int WinMain(
@@ -41,7 +41,7 @@ int WinMain(
 }
 
 /**
- * ÏÔÊ¾´°¿Ú
+ * æ˜¾ç¤ºçª—å£
  * @param hInstance
  * @return
  */
@@ -49,17 +49,17 @@ int show_frame(HINSTANCE hInstance)
 {
     MSG msg;
     BOOL bRet;
-    // ×¢²á´°¿ÚÀà
+    // æ³¨å†Œçª—å£ç±»
     MyRegisterClass(hInstance);
 
-    // ´´½¨´°¿Ú²¢ÏÔÊ¾´°¿Ú
+    // åˆ›å»ºçª—å£å¹¶æ˜¾ç¤ºçª—å£
     if (!InitInstance(hInstance, SW_SHOWNORMAL))
     {
         return FALSE;
     }
 
-    // ÏûÏ¢Ñ­»·
-    // »ñÈ¡ÊôÓÚ×Ô¼ºµÄÏûÏ¢²¢½øĞĞ·Ö·¢
+    // æ¶ˆæ¯å¾ªç¯
+    // è·å–å±äºè‡ªå·±çš„æ¶ˆæ¯å¹¶è¿›è¡Œåˆ†å‘
     while ((bRet = GetMessage(&msg, nullptr, 0, 0)) != 0)
     {
         if (bRet == -1)
@@ -76,7 +76,7 @@ int show_frame(HINSTANCE hInstance)
 }
 
 /**
- * ÏûÏ¢µ÷ÓÃ¼ÇÊÂ±¾
+ * æ¶ˆæ¯è°ƒç”¨è®°äº‹æœ¬
  */
 void exec_notepad()
 {
@@ -85,31 +85,31 @@ void exec_notepad()
     // d->OnClose();
     d->OnEditWnd();
     // d->OnGetWnd();
-    start("ÏûÏ¢²âÊÔ");
+    start("æ¶ˆæ¯æµ‹è¯•");
 }
 
 ATOM MyRegisterClass(HINSTANCE hInstance)
 {
     WNDCLASSEX WndCls;
-    // Ìî³ä½á¹¹ÌåÎª0
+    // å¡«å……ç»“æ„ä½“ä¸º0
     ZeroMemory(&WndCls, sizeof(WNDCLASSEX));
-    // cbSizeÊÇ½á¹¹Ìå´óĞ¡
+    // cbSizeæ˜¯ç»“æ„ä½“å¤§å°
     WndCls.cbSize = sizeof(WNDCLASSEX);
-    // lpfnWndProcÊÇ´°¿Ú¹ı³ÌµØÖ·
+    // lpfnWndProcæ˜¯çª—å£è¿‡ç¨‹åœ°å€
     WndCls.lpfnWndProc = WindowProc;
-    // hInstanceÊÇÊµÀı¾ä±ú
+    // hInstanceæ˜¯å®ä¾‹å¥æŸ„
     WndCls.hInstance = hInstance;
-    // lpszClassNameÊÇ´°¿ÚÀàÀàÃû
+    // lpszClassNameæ˜¯çª—å£ç±»ç±»å
     WndCls.lpszClassName = CLASSNAME;
-    // styleÊÇ´°¿ÚÀà·ç¸ñ
+    // styleæ˜¯çª—å£ç±»é£æ ¼
     WndCls.style = CS_HREDRAW | CS_VREDRAW;
-    // hbrBackgroundÊÇ´°¿ÚÀà±³¾°É«
+    // hbrBackgroundæ˜¯çª—å£ç±»èƒŒæ™¯è‰²
     WndCls.hbrBackground = (HBRUSH) COLOR_WINDOWFRAME + 1;
-    // hCursorÊÇÊó±ê¾ä±ú
+    // hCursoræ˜¯é¼ æ ‡å¥æŸ„
     WndCls.hCursor = LoadCursor(NULL, IDC_ARROW);
-    // hIconÊÇÍ¼±ê¾ä±ú
+    // hIconæ˜¯å›¾æ ‡å¥æŸ„
     WndCls.hIcon = LoadIcon(NULL, IDI_QUESTION);
-    // ÆäËû
+    // å…¶ä»–
     WndCls.cbClsExtra = 0;
     WndCls.cbWndExtra = 0;
     return RegisterClassEx(&WndCls);
@@ -141,7 +141,7 @@ LRESULT CALLBACK WindowProc(
         case WM_CLOSE:
         {
             if (IDYES == MessageBox(hwnd,
-                                    "ÊÇ·ñÍË³ö³ÌĞò", "MyFirstWin", MB_YESNO))
+                                    "æ˜¯å¦é€€å‡ºç¨‹åº", "MyFirstWin", MB_YESNO))
             {
                 DestroyWindow(hwnd);
                 PostQuitMessage(0);
@@ -160,7 +160,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
     HWND hWnd = NULL;
 
-    // ´´½¨´°¿Ú
+    // åˆ›å»ºçª—å£
     hWnd = CreateWindowEx(WS_EX_CLIENTEDGE,
                           CLASSNAME,
                           "MyFirstWindow",
@@ -173,9 +173,9 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
     {
         return FALSE;
     }
-    // ÏÔÊ¾´°¿Ú
+    // æ˜¾ç¤ºçª—å£
     ShowWindow(hWnd, nCmdShow);
-    // ¸üĞÂ´°¿Ú
+    // æ›´æ–°çª—å£
     UpdateWindow(hWnd);
     return TRUE;
 }
@@ -185,10 +185,10 @@ void CMsgTestDlg::OnClose()
     HWND hwnd = ::FindWindow("Notepad", nullptr);
     if (hwnd == nullptr)
     {
-        // µ÷ÓÃAPIº¯Êı MessageBox
+        // è°ƒç”¨APIå‡½æ•° MessageBox
         MessageBox(nullptr,
-                   TEXT("Ã»ÓĞÕÒµ½¼ÇÊÂ±¾"),
-                   TEXT("ÌáÊ¾"),
+                   TEXT("æ²¡æœ‰æ‰¾åˆ°è®°äº‹æœ¬"),
+                   TEXT("æç¤º"),
                    MB_OK);
     } else
     {
@@ -204,13 +204,13 @@ void CMsgTestDlg::OnExec()
 
 void CMsgTestDlg::OnEditWnd()
 {
-    HWND hWnd = FindWindow(nullptr, "ÎŞ±êÌâ - ¼ÇÊÂ±¾");
+    HWND hWnd = FindWindow(nullptr, "æ— æ ‡é¢˜ - è®°äº‹æœ¬");
     if (hWnd == nullptr)
     {
-        MessageBox(nullptr, TEXT("Ã»ÓĞÕÒµ½¼ÇÊÂ±¾"), TEXT("ÌáÊ¾"), MB_OK);
+        MessageBox(nullptr, TEXT("æ²¡æœ‰æ‰¾åˆ°è®°äº‹æœ¬"), TEXT("æç¤º"), MB_OK);
         return;
     }
-    std::string pCaptionText = "ÏûÏ¢²âÊÔ";
+    std::string pCaptionText = "æ¶ˆæ¯æµ‹è¯•";
     ::SendMessage(hWnd, WM_SETTEXT, (WPARAM) 0, (LPARAM) pCaptionText.c_str());
 }
 
@@ -219,10 +219,10 @@ void CMsgTestDlg::OnGetWnd()
     HWND hWnd = ::FindWindow("Notepad", nullptr);
     if (hWnd == nullptr)
     {
-        MessageBox(nullptr, TEXT("Ã»ÓĞÕÒµ½¼ÇÊÂ±¾"), TEXT("ÌáÊ¾"), MB_OK);
+        MessageBox(nullptr, TEXT("æ²¡æœ‰æ‰¾åˆ°è®°äº‹æœ¬"), TEXT("æç¤º"), MB_OK);
         return;
     }
     char pCaptionText[MAXBYTE] = {0};
     ::SendMessage(hWnd, WM_GETTEXT, (WPARAM) MAXBYTE, (LPARAM) pCaptionText);
-    MessageBox(nullptr, TEXT(pCaptionText), TEXT("ÌáÊ¾"), MB_OK);
+    MessageBox(nullptr, TEXT(pCaptionText), TEXT("æç¤º"), MB_OK);
 }

@@ -1,7 +1,7 @@
 /*
-* ×÷Õß£ºÁõÊ±Ã÷
-* Ê±¼ä£º2020/6/17-21:52
-* ×÷ÓÃ£ºµ¥ÏòÁ´±í
+* ä½œè€…ï¼šåˆ˜æ—¶æ˜
+* æ—¶é—´ï¼š2020/6/17-21:52
+* ä½œç”¨ï¼šå•å‘é“¾è¡¨
 */
 #include "algorithm.h"
 
@@ -45,7 +45,7 @@ private:
     {
         if (index < 0 || index >= this->c_size)
         {
-            throw illegalParameterValue((char *) "Ë÷ÒıÔ½½ç");
+            throw illegalParameterValue((char *) "ç´¢å¼•è¶Šç•Œ");
         }
     }
 
@@ -53,7 +53,7 @@ private:
     {
         if (index < 0 || index > this->c_size)
         {
-            throw illegalParameterValue((char *) "Ë÷ÒıÔ½½ç");
+            throw illegalParameterValue((char *) "ç´¢å¼•è¶Šç•Œ");
         }
     }
 
@@ -66,7 +66,7 @@ public:
 
     ~ChainList()
     {
-        cout << "Îö¹¹º¯Êıµ÷ÓÃ" << endl;
+        cout << "ææ„å‡½æ•°è°ƒç”¨" << endl;
         while (head != nullptr)
         {
             ChainNode<T> *nextNode = head->next;

@@ -9,18 +9,13 @@
 
 void *thFunc(void *arg)
 {
-    cout << "in thFunc" << endl;
+    pid_t pid = getpid();
+    cout << "in thFunc,pid=" << pid << endl;
     return (void *) nullptr;
 }
 
 void ch12()
 {
-    int a=1;
-    a++;
-
-    cout << a << endl;
-
-
     pthread_t t;
     int ret;
     ret = pthread_create(&t, nullptr, thFunc, nullptr);

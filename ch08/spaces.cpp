@@ -1,7 +1,7 @@
 /*
-* ×÷Õß£ºÁõÊ±Ã÷
-* Ê±¼ä£º2020/7/5 0005-23:20
-* ×÷ÓÃ£º
+* ä½œè€…ï¼šåˆ˜æ—¶æ˜Ž
+* æ—¶é—´ï¼š2020/7/5 0005-23:20
+* ä½œç”¨ï¼š
 */
 #include "ch08.h"
 
@@ -21,7 +21,7 @@ void spaces_demo()
     my_spaces::number = 100;
 
     my_spaces::Animal dog{};
-    dog.name = "¹·";
+    dog.name = "ç‹—";
 
     cout << my_spaces::number << endl;
     cout << dog.name << endl;

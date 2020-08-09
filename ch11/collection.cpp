@@ -1,7 +1,7 @@
 /*
-* ×÷Õß£ºÁõÊ±Ã÷
-* Ê±¼ä£º2020/6/14-22:37
-* ×÷ÓÃ£º
+* ä½œè€…ï¼šåˆ˜æ—¶æ˜Ž
+* æ—¶é—´ï¼š2020/6/14-22:37
+* ä½œç”¨ï¼š
 */
 #include "ch11.h"
 #include <map>
@@ -17,7 +17,7 @@ void mapDemo()
 {
     auto *demoMap = new map<int, string>();
     bool result = demoMap->insert(pair<int, string>(1, "hello")).second;
-    cout << "²åÈë½á¹û=" << result << endl;
+    cout << "æ’å…¥ç»“æžœ=" << result << endl;
     demoMap->insert(pair<int, string>(2, "lw"));
     (*demoMap)[3] = "simple";
     string val = demoMap->at(1);
@@ -26,7 +26,7 @@ void mapDemo()
     cout << "find=" << demoMap->find(1)->first << endl;
     cout << "find=" << demoMap->find(1)->second << endl;
 
-    // ±éÀúmap
+    // éåŽ†map
     auto iter = demoMap->begin();
     while (iter != demoMap->end())
     {

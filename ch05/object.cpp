@@ -1,7 +1,7 @@
 /*
-* ×÷Õß£ºÁõÊ±Ã÷
-* Ê±¼ä£º2020/5/24-17:16
-* ×÷ÓÃ£º
+* ä½œè€…ï¼šåˆ˜æ—¶æ˜Ž
+* æ—¶é—´ï¼š2020/5/24-17:16
+* ä½œç”¨ï¼š
 */
 #include "object.h"
 #include <iostream>
@@ -12,8 +12,8 @@ void Student::show()
 {
     cout << "ID=" << ID << endl;
     cout << "CODE=" << CODE << endl;
-    cout << "ÐÕÃû=" << name << endl;
-    cout << "ÐÔ±ð=" << (gender == Men ? "ÄÐ" : gender == WoMen ? "Å®" : nullptr) << endl;
+    cout << "å§“å=" << name << endl;
+    cout << "æ€§åˆ«=" << (gender == Men ? "ç”·" : gender == WoMen ? "å¥³" : nullptr) << endl;
 }
 
 Student::Student(string name, Gender gender)

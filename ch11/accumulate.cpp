@@ -21,7 +21,7 @@ void accumulateDemo()
 }
 
 /**
- * ¼ÆËãÀÛ¼ÓºÍ
+ * è®¡ç®—ç´¯åŠ å’Œ
  * @tparam T
  * @param a
  * @param n
@@ -35,7 +35,7 @@ T sum(T a[], int n)
 }
 
 /**
- * ¼ÆËã³Ë»ı
+ * è®¡ç®—ä¹˜ç§¯
  * @tparam T
  * @param a
  * @param n
@@ -49,9 +49,9 @@ T product(T a[], int n)
 }
 
 /**
- * ×Ô¶¨´¦ÀíÇóºÍ£¬Ìõ¼şÈçÏÂ
- * 1.Èç¹ûÊÇÅ¼Êı£¬Ôòµ±Ç°ÔªËØ*2£»
- * 2.Èç¹û²»ÊÇÅ¼Êı£¬Ôòµ±Ç°ÔªËØ+1£»
+ * è‡ªå®šå¤„ç†æ±‚å’Œï¼Œæ¡ä»¶å¦‚ä¸‹
+ * 1.å¦‚æœæ˜¯å¶æ•°ï¼Œåˆ™å½“å‰å…ƒç´ *2ï¼›
+ * 2.å¦‚æœä¸æ˜¯å¶æ•°ï¼Œåˆ™å½“å‰å…ƒç´ +1ï¼›
  * @tparam E
  */
 template<typename E>
@@ -59,11 +59,11 @@ struct customFunc : public binary_function<E, E, E>
 {
     // _GLIBCXX14_CONSTEXPR
     E
-    // prev ´ú±íÉÏÒ»´ÎµÄÔªËØ£¬µÚÒ»´ÎÎªÖ¸¶¨µÄ³õÊ¼Öµ
-    // item ´ú±íµ±Ç°ÔªËØ
+    // prev ä»£è¡¨ä¸Šä¸€æ¬¡çš„å…ƒç´ ï¼Œç¬¬ä¸€æ¬¡ä¸ºæŒ‡å®šçš„åˆå§‹å€¼
+    // item ä»£è¡¨å½“å‰å…ƒç´ 
     operator()(const E &prev, const E &item) const
     {
-        // µÈ¼ÛÓÚ item%2 != 0
+        // ç­‰ä»·äº item%2 != 0
         if (item % 2)
         {
             return prev + (item + 1);

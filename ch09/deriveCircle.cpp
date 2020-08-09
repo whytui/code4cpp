@@ -1,7 +1,7 @@
 /*
-* ×÷Õß£ºÁõÊ±Ã÷
-* Ê±¼ä£º2020/5/31-21:45
-* ×÷ÓÃ£º
+* ä½œè€…ï¼šåˆ˜æ—¶æ˜Ž
+* æ—¶é—´ï¼š2020/5/31-21:45
+* ä½œç”¨ï¼š
 */
 #include "deriveCircle.h"
 
@@ -24,8 +24,8 @@ void DeriveCircle::setR(double r)
 
 void DeriveCircle::showInfo() const
 {
-    cout << "Ô²" << endl;
+    cout << "åœ†" << endl;
     cout << "color=" << this->getColor() << endl;
     cout << "filled=" << this->isFilled() << endl;
-    cout << "Ãæ»ý=" << this-> area() << endl;
+    cout << "é¢ç§¯=" << this-> area() << endl;
 }

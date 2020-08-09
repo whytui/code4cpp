@@ -18,8 +18,9 @@ private:
     string adders;
 
 public:
-    Socket();
-    Socket(string adders,int port);
+    Socket() = default;
+
+    Socket(string adders, int port);
 };
 
 

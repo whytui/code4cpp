@@ -1,7 +1,7 @@
 /*
-* ×÷Õß£ºÁõÊ±Ã÷
-* Ê±¼ä£º2020/5/24-17:13
-* ×÷ÓÃ£º
+* ä½œè€…ï¼šåˆ˜æ—¶æ˜Ž
+* æ—¶é—´ï¼š2020/5/24-17:13
+* ä½œç”¨ï¼š
 */
 #include "ch05.h"
 #include "stack.h"
@@ -14,7 +14,7 @@ int Student::CODE = 1998;
 
 void ch05()
 {
-    auto *student = new Student("ÁõÊ±Ã÷", Men);
+    auto *student = new Student("åˆ˜æ—¶æ˜Ž", Men);
     student->show();
 
     student->infMethod();
@@ -31,6 +31,6 @@ void ch05()
     cout << stack.get_size() << endl;
     while (!stack.is_empty())
     {
-        cout << "µ¯³öÒ»¸ö=" << stack.pop() << endl;
+        cout << "å¼¹å‡ºä¸€ä¸ª=" << stack.pop() << endl;
     }
 }

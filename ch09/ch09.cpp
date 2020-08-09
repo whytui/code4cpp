@@ -1,7 +1,7 @@
 /*
-* ���ߣ���ʱ��
-* ʱ�䣺2020/5/31-21:28
-* ���ã�
+* 作者：刘时明
+* 时间：2020/5/31-21:28
+* 作用：
 */
 #include "ch09.h"
 
@@ -12,12 +12,12 @@ GeometricObj& cast2(DeriveCircle &circle);
 void ch09()
 {
     auto *c=new DeriveCircle();
-    c->setColor("��ɫ");
+    c->setColor("白色");
     c->setFilled(true);
     c->setR(2.5);
     c->showInfo();
 
-    // ���д��麯�������ǳ����࣬�����Ա�ʵ����
+    // 带有纯虚函数的类是抽象类，不可以被实例化
 
     // auto *g=new GeometricObj();
     cast1(*c);
@@ -27,9 +27,9 @@ void ch09()
 }
 
 /**
- * ����ת��
- * dynamic_castֻ���ڶ�̬���͵�ָ�����������ʹ�ã�Ҳ���Ǳ���������麯��
- * static_cast������ʱ�������ת���Ƿ�ɹ��������ڱ���ʱ
+ * 类型转换
+ * dynamic_cast只用于多态类型的指针或者引用上使用，也就是必须包括纯虚函数
+ * static_cast在运行时检查类型转换是否成功，作用在编译时
  * @param obj
  */
 void cast1(GeometricObj &obj)
