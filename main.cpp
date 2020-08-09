@@ -15,8 +15,8 @@ int main(int argc, char *argv[])
 {
     printArgs(argc, argv);
     cout << "Hello, World!" << endl;
-    cout << "Äã" << "Åä" << "Âð£¿" << endl;
+    cout << "ä½ " << "é…" << "å—ï¼Ÿ" << endl;
     cout << 0xFF << endl;
-    sort();
+    ch12();
     return 0;
 }

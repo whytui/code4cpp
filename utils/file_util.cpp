@@ -6,7 +6,7 @@ using namespace std;
 #include "file_util.h"
 
 /**
- * »ñÈ¡Ä¿Â¼ÏÂµÄÎÄ¼þÁÐ±í
+ * ï¿½ï¿½È¡Ä¿Â¼ï¿½Âµï¿½ï¿½Ä¼ï¿½ï¿½Ð±ï¿½
  * @param root
  * @param files
  */
@@ -29,7 +29,7 @@ void file_list(const string &path, vector<string> *files)
 }
 
 /**
- * »ñÈ¡Ä¿Â¼ÏÂµÄÎÄ¼þÁÐ±í
+ * ï¿½ï¿½È¡Ä¿Â¼ï¿½Âµï¿½ï¿½Ä¼ï¿½ï¿½Ð±ï¿½
  * @param root
  * @return
  */
@@ -41,38 +41,38 @@ vector<string> *file_list(const string &path)
 }
 
 /**
- * ´´½¨Ä¿Â¼,Ö§³Ö¶à¼¶Ä¿Â¼´´½¨
+ * ï¿½ï¿½ï¿½ï¿½Ä¿Â¼,Ö§ï¿½Ö¶à¼¶Ä¿Â¼ï¿½ï¿½ï¿½ï¿½
  * @param dirs
  */
 void make_dirs(const string &dirs)
 {
-    int index;
-    string temp = dirs;
-    string appendStr;
-    while ((index = temp.find('\\')) != -1)
-    {
-        string sub = temp.substr(0, index);
-        if (appendStr.length() != 0)
-        {
-            appendStr.append("\\");
-        }
-        appendStr.append(sub);
-        if (_access(appendStr.c_str(), 0) == -1)
-        {
-            mkdir(appendStr.c_str());
-        }
-        temp = temp.substr(index + 1, temp.length());
-    }
-    // ×·¼Ó×îºóÒ»¼¶
-    appendStr.append("\\").append(temp.substr(index + 1, temp.length()));
-    if (_access(appendStr.c_str(), 0) == -1)
-    {
-        mkdir(appendStr.c_str());
-    }
+//    int index;
+//    string temp = dirs;
+//    string appendStr;
+//    while ((index = temp.find('\\')) != -1)
+//    {
+//        string sub = temp.substr(0, index);
+//        if (appendStr.length() != 0)
+//        {
+//            appendStr.append("\\");
+//        }
+//        appendStr.append(sub);
+//        if (_access(appendStr.c_str(), 0) == -1)
+//        {
+//            mkdir(appendStr.c_str());
+//        }
+//        temp = temp.substr(index + 1, temp.length());
+//    }
+//    // ×·ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+//    appendStr.append("\\").append(temp.substr(index + 1, temp.length()));
+//    if (_access(appendStr.c_str(), 0) == -1)
+//    {
+//        mkdir(appendStr.c_str());
+//    }
 }
 
 /**
- * ¿½±´ÎÄ¼þ
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
  * @param dist
  * @param src
  */
@@ -90,11 +90,11 @@ void copy(const string &dist,const string &src)
             src_temp.append("\\").append(i);
             if(is_dir(src_temp))
             {
-                // ÊÇÄ¿Â¼
+                // ï¿½ï¿½Ä¿Â¼
                 copy(dist_temp, src_temp);
             } else
             {
-                // ÎÄ¼þ
+                // ï¿½Ä¼ï¿½
                 copy_file(dist_temp, src_temp);
             }
         }
@@ -106,7 +106,7 @@ void copy(const string &dist,const string &src)
 }
 
 /**
- * Ê¹ÓÃ¶þ½øÖÆÁ÷Íê³ÉÎÄ¼þ¿½±´
+ * Ê¹ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
  * @param dist
  * @param src
  */
@@ -130,7 +130,7 @@ void copy_file(const string &dist, const string &src)
 }
 
 /**
- * ÅÐ¶ÏÖ¸¶¨Â·¾¶ÊÇ·ñÎªÄ¿Â¼
+ * ï¿½Ð¶ï¿½Ö¸ï¿½ï¿½Â·ï¿½ï¿½ï¿½Ç·ï¿½ÎªÄ¿Â¼
  * @param path
  * @return
  */

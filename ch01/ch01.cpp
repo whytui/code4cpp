@@ -15,7 +15,7 @@ void readLine();
 
 void dateDemo();
 
-void random();
+// void random();
 
 void math_demo();
 

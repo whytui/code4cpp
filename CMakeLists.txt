@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.17)
 project(code4cpp)
 
 set(CMAKE_CXX_STANDARD 20)
@@ -21,6 +21,7 @@ add_executable(code4cpp
         ch09/ch09.cpp ch09/ch09.h ch09/geometricObj.cpp ch09/geometricObj.h ch09/deriveCircle.cpp ch09/deriveCircle.h
         ch10/ch10.cpp ch10/ch10.h
         ch11/ch11.cpp ch11/ch11.h ch11/accumulate.cpp ch11/copy.cpp ch11/collection.cpp
+        ch12/ch12.cpp ch12/ch12.h
         windows/win.cpp windows/win.h windows/key_board.cpp windows/key_board.h
         thread/thread.cpp thread/thread.h
         socket/socket.cpp socket/socket.h
