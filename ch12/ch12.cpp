@@ -7,23 +7,7 @@
 #include <cstdio>
 #include <unistd.h>
 
-void *thFunc(void *arg)
-{
-    pid_t pid = getpid();
-    cout << "in thFunc,pid=" << pid << endl;
-    return (void *) nullptr;
-}
-
 void ch12()
 {
-    pthread_t t;
-    int ret;
-    ret = pthread_create(&t, nullptr, thFunc, nullptr);
-    if (ret)
-    {
-        printf("pthread_create failed:%d\n", ret);
-        return;
-    }
-    sleep(1);
-    printf("in main:thread is created , ret=%d\n", ret);
+    thread_add();
 }

@@ -9,4 +9,6 @@
 
 using namespace std;
 
+void thread_add();
+
 #endif //CODE4CPP_CH12_H
