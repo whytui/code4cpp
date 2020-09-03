@@ -40,7 +40,7 @@ void *CThreadPool::ThreadFunc(void *threadData)
         }
 
         printf("[tid: %lu]\trun: ", tid);
-        vector<CTask *>::iterator iter = m_vecTaskList.begin();
+        auto iter = m_vecTaskList.begin();
         //取出一个任务并处理之
         CTask *task = *iter;
         if (iter != m_vecTaskList.end())
@@ -55,7 +55,6 @@ void *CThreadPool::ThreadFunc(void *threadData)
         printf("[tid: %lu]\tidle\n", tid);
 
     }
-
     return (void *) 0;
 }
 
