@@ -14,6 +14,8 @@ void memory_alignment();
 
 void ptr_demo();
 
+void life_test();
+
 /**
  * C++函数支持默认参数，而且必须在末尾位置，且可以定义多个
  * @param args
@@ -51,11 +53,13 @@ void ch06()
 //
 //    memory_alignment();
 
-    ptr_demo();
+//    ptr_demo();
+//
+//    ptr_demo2();
+//
+//    func_point2();
 
-    ptr_demo2();
-
-    func_point2();
+    life_test();
 }
 
 void point()
