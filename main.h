@@ -29,8 +29,6 @@ void ch10();
 
 void ch11();
 
-void ch12();
-
 int thread();
 
 void start_socket();

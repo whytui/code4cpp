@@ -1,11 +1,13 @@
 cmake_minimum_required(VERSION 3.17)
-project(code4cpp)
+project(code4cpp VERSION 3.17)
 
 set(CMAKE_CXX_STANDARD 20)
 
 set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 
 link_libraries(ws2_32)
+
+message(STATUS "${CMAKE_SYSTEM_NAME}")
 
 add_executable(code4cpp
         main.cpp main.h
@@ -21,8 +23,11 @@ add_executable(code4cpp
         ch09/ch09.cpp ch09/ch09.h ch09/geometricObj.cpp ch09/geometricObj.h ch09/deriveCircle.cpp ch09/deriveCircle.h
         ch10/ch10.cpp ch10/ch10.h
         ch11/ch11.cpp ch11/ch11.h ch11/accumulate.cpp ch11/copy.cpp ch11/collection.cpp
-        ch12/ch12.cpp ch12/ch12.h ch12/mutex.cpp ch12/thread_pool.cpp ch12/thread_pool.h
         windows/win.cpp windows/win.h windows/key_board.cpp windows/key_board.h
         thread/thread.cpp thread/thread.h
         socket/socket.cpp socket/socket.h
         utils/utils.cpp utils/utils.h utils/file_util.cpp utils/file_util.h utils/socket.cpp utils/socket.h)
+
+message(STATUS "Generating CH12...")
+set(CH12 ch12/ch12.cpp ch12/ch12.h ch12/mutex.cpp ch12/thread_pool.cpp ch12/thread_pool.h)
+add_executable(ch12 ${CH12})
