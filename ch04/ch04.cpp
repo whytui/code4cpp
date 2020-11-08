@@ -1,11 +1,6 @@
-/*
-* 作者：刘时明
-* 时间：2020/5/24-12:23
-* 作用：
-*/
 #include "ch04.h"
 
-void ch04()
+int main()
 {
     string str("application");
 
@@ -13,7 +8,7 @@ void ch04()
     book->setId(10);
     cout << book->getId() << endl;
 
-    auto *circle = new Circle(1, "Java编程思想", 3.14);
+    auto *circle = new Circle(1, "Java缂栫▼鎬濇兂", 3.14);
     cout << circle->getId() << endl;
     cout << circle->getName() << endl;
 
@@ -24,4 +19,7 @@ void ch04()
     union_demo();
 
     enum_demo();
+
+    func();
+    return 0;
 }

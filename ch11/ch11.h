@@ -14,6 +14,4 @@
 
 using namespace std;
 
-void ch11();
-
 #endif //CODE4CPP_CH11_H

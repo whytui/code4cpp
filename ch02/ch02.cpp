@@ -1,18 +1,15 @@
 /*
-* ×÷Õß£ºÁõÊ±Ã÷
-* Ê±¼ä£º2020/5/23-23:47
-* ×÷ÓÃ£º
+* ä½œè€…ï¼šåˆ˜æ—¶æ˜Ž
+* æ—¶é—´ï¼š2020/5/23-23:47
+* ä½œç”¨ï¼š
 */
 #include "ch02.h"
 
-void read(const string &filePath);
-
-void write(const string &filePath, const string &content);
-
-void maze(const string &path);
-
-void ch02()
+int main()
 {
-    read("../resource/hello.java");
+    // read("../resource/hello.java");
     // maze("../resource/maze.txt");
+
+    binary_read();
+    return 0;
 }

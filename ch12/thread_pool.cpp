@@ -74,8 +74,7 @@ int CThreadPool::Create()
 {
     pthread_id = new pthread_t[m_iThreadNum];
     for (int i = 0; i < m_iThreadNum; i++)
-        pthread_create(&pthread_id[i], NULL, ThreadFunc, NULL);
-
+        pthread_create(&pthread_id[i], nullptr, ThreadFunc, nullptr);
     return 0;
 }
 

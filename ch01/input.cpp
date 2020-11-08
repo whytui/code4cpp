@@ -1,53 +1,53 @@
 /*
-* ×÷Õß£ºÁõÊ±Ã÷
-* Ê±¼ä£º2020/6/13-0:28
-* ×÷ÓÃ£º¶ÁÈ¡¼üÅÌÊäÈë
+* ä½œè€…ï¼šåˆ˜æ—¶æ˜
+* æ—¶é—´ï¼š2020/6/13-0:28
+* ä½œç”¨ï¼šè¯»å–é”®ç›˜è¾“å…¥
 */
 #include "ch01.h"
 
 void readStdInput1()
 {
     /**
-     * C++ÖĞ£¬cin±íÊ¾±ê×¼¿ØÖÆÌ¨ÊäÈë
-     * >> ÎªÁ÷ÌáÈ¡·ûºÅ
+     * C++ä¸­ï¼Œcinè¡¨ç¤ºæ ‡å‡†æ§åˆ¶å°è¾“å…¥
+     * >> ä¸ºæµæå–ç¬¦å·
      */
     double radius = 0;
-    cout << "ÊäÈë°ë¾¶£º";
+    cout << "è¾“å…¥åŠå¾„ï¼š";
     cin >> radius;
     double area = radius * radius * PI;
-    cout << "Ô²µÄÃæ»ı=" << area << endl;
-    cout << "doubleÀàĞÍ³¤¶ÈÎª£º" << sizeof(area) << "byte" << endl;
+    cout << "åœ†çš„é¢ç§¯=" << area << endl;
+    cout << "doubleç±»å‹é•¿åº¦ä¸ºï¼š" << sizeof(area) << "byte" << endl;
 }
 
 void readStdInput2()
 {
     /**
-     * C++ÖĞ£¬double number1(0)µÈ¼ÛÓÚdouble number=0
+     * C++ä¸­ï¼Œdouble number1(0)ç­‰ä»·äºdouble number=0
      */
     double number1(0), number2(0), number3(0);
-    cout << "ÊäÈëÈı¸öÊıÖµ£º";
+    cout << "è¾“å…¥ä¸‰ä¸ªæ•°å€¼ï¼š";
     cin >> number1 >> number2 >> number3;
-    cout << "Æ½¾ùÖµ=" << (number1 + number2 + number3) / 3;
+    cout << "å¹³å‡å€¼=" << (number1 + number2 + number3) / 3;
 }
 
 void readStdInput3()
 {
     char c[1];
     scanf("%s", &c);
-    cout << "ÄãÊäÈëµÄÊÇ£º" << c << endl;
+    cout << "ä½ è¾“å…¥çš„æ˜¯ï¼š" << c << endl;
 }
 
 void readLine()
 {
-    // ¶ÁÈ¡Ò»ĞĞ£¬»Ø³µ·ûÎª½áÊø
+    // è¯»å–ä¸€è¡Œï¼Œå›è½¦ç¬¦ä¸ºç»“æŸ
     string str;
-    cout << "ÊäÈëÒ»ĞĞ" << endl;
+    cout << "è¾“å…¥ä¸€è¡Œ" << endl;
     getline(cin, str, '\n');
-    cout << "ÔÙÊäÈëÒ»ĞĞ" << endl;
+    cout << "å†è¾“å…¥ä¸€è¡Œ" << endl;
     char buff[5];
-    // Èç¹ûÊäÈëµÄ×Ö·û´®´óÓÚ³¤¶È£¬Ôò¶àÓàµÄ»á±»ÉáÆú
+    // å¦‚æœè¾“å…¥çš„å­—ç¬¦ä¸²å¤§äºé•¿åº¦ï¼Œåˆ™å¤šä½™çš„ä¼šè¢«èˆå¼ƒ
     cin.getline(buff, 5);
-    cout << "ÊäÈëÈçÏÂ£º" << endl;
-    cout << "ÄãÊäÈëµÄÊÇ=" << str << endl;
-    cout << "ÄãÊäÈëµÄÊÇ=" << buff << endl;
+    cout << "è¾“å…¥å¦‚ä¸‹ï¼š" << endl;
+    cout << "ä½ è¾“å…¥çš„æ˜¯=" << str << endl;
+    cout << "ä½ è¾“å…¥çš„æ˜¯=" << buff << endl;
 }

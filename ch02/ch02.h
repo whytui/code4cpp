@@ -15,6 +15,14 @@
 
 using namespace std;
 
-void ch02();
+void read(const string &filePath);
+
+void write(const string &filePath, const string &content);
+
+void maze(const string &path);
+
+void binary_read();
+
+void binary_write();
 
 #endif //CODE4CPP_CH02_H

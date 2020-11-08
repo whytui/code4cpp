@@ -7,6 +7,7 @@
 #define CODE4CPP_CH08_H
 
 #include <iostream>
+#include <typeinfo>
 
 using namespace std;
 

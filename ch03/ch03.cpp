@@ -1,15 +1,15 @@
 /*
-* ×÷Õß£ºÁõÊ±Ã÷
-* Ê±¼ä£º2020/5/24-7:02
-* ×÷ÓÃ£º
+* ä½œè€…ï¼šåˆ˜æ—¶æ˜Ž
+* æ—¶é—´ï¼š2020/5/24-7:02
+* ä½œç”¨ï¼š
 */
 #include "ch03.h"
 
-void ch03()
+int main()
 {
     point_and_arr();
-
     dynamic_array();
+    return 0;
 }
 
 void avg_demo()
@@ -18,11 +18,11 @@ void avg_demo()
     int numbers[size];
     for (int i = 0; i < size; ++i)
     {
-        cout << "ÊäÈëµÚ" << i + 1 << "/" << size << "¸öÔªËØµÄÖµ" << endl;
+        cout << "è¾“å…¥ç¬¬" << i + 1 << "/" << size << "ä¸ªå…ƒç´ çš„å€¼" << endl;
         cin >> numbers[i];
     }
-    cout << "Æ½¾ùÖµ=" << getAvg(numbers, size) << endl;
-    cout << "×î´óÖµ=" << getMax(numbers, size) << endl;
+    cout << "å¹³å‡å€¼=" << getAvg(numbers, size) << endl;
+    cout << "æœ€å¤§å€¼=" << getMax(numbers, size) << endl;
     cout << "sizeof=" << sizeof(numbers) << endl;
 
     change_arr(numbers);
@@ -52,19 +52,19 @@ int getMax(const int numbers[], int size)
 
 void change_arr(int numbers[])
 {
-    // ´Ë´¦sizeof·µ»Ø4£¬¼´Êý×éÀàÐÍintµÄ×Ö½ÚÊý£¬²¢Òý·¢±àÒë¾¯±¨
+    // æ­¤å¤„sizeofè¿”å›ž4ï¼Œå³æ•°ç»„ç±»åž‹intçš„å­—èŠ‚æ•°ï¼Œå¹¶å¼•å‘ç¼–è¯‘è­¦æŠ¥
     // warning: 'sizeof' on array function parameter 'numbers' will return size of 'int*'
     // cout << "change_arr,sizeof=" << sizeof(numbers) << endl;
-    // ÓÉÓÚÊý×éÊÇÖ¸ÕëÀàÐÍ£¬ËùÒÔÐÞ¸Ä»áÉúÐ§
+    // ç”±äºŽæ•°ç»„æ˜¯æŒ‡é’ˆç±»åž‹ï¼Œæ‰€ä»¥ä¿®æ”¹ä¼šç”Ÿæ•ˆ
     numbers[0] = -1;
 }
 
 /**
- * ³õÊ¼»¯Ò»¸±ÆË¿Ë
+ * åˆå§‹åŒ–ä¸€å‰¯æ‰‘å…‹
  */
 void poker()
 {
-    string types[] = {"ºÚÌÒ", "ºìÌÒ", "Ã·»¨", "·½¿é"};
+    string types[] = {"é»‘æ¡ƒ", "çº¢æ¡ƒ", "æ¢…èŠ±", "æ–¹å—"};
     string ranks[] = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
     string targets[52];
 
@@ -83,11 +83,11 @@ void poker()
 
 
 /**
- * ¶àÎ¬Êý×é
+ * å¤šç»´æ•°ç»„
  */
 void multidimensional_array()
 {
-    // Êý×é±¾ÖÊ¾ÍÊÇÒ»¸öÖ¸Õë£¬¶àÎ¬Êý×é¾ÍÊÇ¶àÎ¬Ö¸Õë
+    // æ•°ç»„æœ¬è´¨å°±æ˜¯ä¸€ä¸ªæŒ‡é’ˆï¼Œå¤šç»´æ•°ç»„å°±æ˜¯å¤šç»´æŒ‡é’ˆ
     int len1 = 10, len2 = 10, len3 = 10;
     int ***p;
     p = new int **[len3];
@@ -104,7 +104,7 @@ void multidimensional_array()
         }
     }
 
-    // ´òÓ¡ÄÚÈÝ²¢ÊÍ·ÅÖ¸ÕëÄÚ´æ
+    // æ‰“å°å†…å®¹å¹¶é‡Šæ”¾æŒ‡é’ˆå†…å­˜
     for (int i = 0; i < len3; ++i)
     {
         for (int j = 0; j < len2; ++j)
@@ -119,9 +119,9 @@ void multidimensional_array()
     }
     delete[] p;
     cout << endl;
-    // ´ËÊ±ÒÀÈ»¿ÉÒÔ·ÃÎÊµ½ÄÚÈÝ
-    // Ô­Òò£ºÄãÖ»ÊÇ·ÅÆúÁË¶ÔÕâÆ¬ÄÚ´æµÄËùÓÐÈ¨¡£»ñµÃËùÓÐÈ¨µÄÈË¶ÔÕâÆ¬ÄÚ´æ×öÊ²Ã´£¨»òÕßËµÊ²Ã´¶¼²»×ö£©¶¼²»¹ØÄãµÄÊÂ
-    cout << "ÊÍ·Åºó=" << p[0] << endl;
-    cout << "ÊÍ·Åºó=" << p[0][0] << endl;
-    cout << "ÊÍ·Åºó=" << p[0][0][0] << endl;
+    // æ­¤æ—¶ä¾ç„¶å¯ä»¥è®¿é—®åˆ°å†…å®¹
+    // åŽŸå› ï¼šä½ åªæ˜¯æ”¾å¼ƒäº†å¯¹è¿™ç‰‡å†…å­˜çš„æ‰€æœ‰æƒã€‚èŽ·å¾—æ‰€æœ‰æƒçš„äººå¯¹è¿™ç‰‡å†…å­˜åšä»€ä¹ˆï¼ˆæˆ–è€…è¯´ä»€ä¹ˆéƒ½ä¸åšï¼‰éƒ½ä¸å…³ä½ çš„äº‹
+    cout << "é‡Šæ”¾åŽ=" << p[0] << endl;
+    cout << "é‡Šæ”¾åŽ=" << p[0][0] << endl;
+    cout << "é‡Šæ”¾åŽ=" << p[0][0][0] << endl;
 }

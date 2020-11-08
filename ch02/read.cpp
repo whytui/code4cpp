@@ -1,7 +1,7 @@
 /*
-* ×÷Õß£ºÁõÊ±Ã÷
-* Ê±¼ä£º2020/6/13-19:58
-* ×÷ÓÃ£º
+* ä½œè€…ï¼šåˆ˜æ—¶æ˜
+* æ—¶é—´ï¼š2020/6/13-19:58
+* ä½œç”¨ï¼š
 */
 #include "ch02.h"
 
@@ -20,7 +20,7 @@ void readByte(const string &filePath);
 void objectStream();
 
 /**
- * ¶ÁÎÄ¼ş
+ * è¯»æ–‡ä»¶
  */
 void read(const string &filePath)
 {
@@ -34,22 +34,22 @@ void read(const string &filePath)
 }
 
 /**
- * °´ĞĞ¶ÁÈ¡
+ * æŒ‰è¡Œè¯»å–
  *
  * @param filePath
  */
 void readLine(const string &filePath)
 {
-    cout << endl << "ÖğĞĞ¶ÁÈ¡" << endl;
+    cout << endl << "é€è¡Œè¯»å–" << endl;
     ifstream input;
     input.open(filePath);
     string content;
     if (!input.is_open())
     {
-        printf("¶ÁÈ¡²»µ½Ö¸¶¨ÎÄ¼ş!!!\n");
+        printf("è¯»å–ä¸åˆ°æŒ‡å®šæ–‡ä»¶!!!\n");
         return;
     }
-    // Ä¬ÈÏ°´¿Õ¸ñ¶ÁÈ¡£¬Ö¸¶¨getline°´ĞĞ¶ÁÈ¡
+    // é»˜è®¤æŒ‰ç©ºæ ¼è¯»å–ï¼ŒæŒ‡å®šgetlineæŒ‰è¡Œè¯»å–
     while (getline(input, content))
     {
         cout << content << endl;
@@ -58,20 +58,20 @@ void readLine(const string &filePath)
 }
 
 /**
- * °´×Ö·û¶ÁÈ¡
+ * æŒ‰å­—ç¬¦è¯»å–
  * @param filePath
  */
 void readChar(const string &filePath)
 {
-    cout << endl << "Öğ¸ö×Ö·û¶ÁÈ¡" << endl;
+    cout << endl << "é€ä¸ªå­—ç¬¦è¯»å–" << endl;
     ifstream input;
     input.open(filePath);
     if (!input.is_open())
     {
-        printf("¶ÁÈ¡²»µ½Ö¸¶¨ÎÄ¼ş!!!\n");
+        printf("è¯»å–ä¸åˆ°æŒ‡å®šæ–‡ä»¶!!!\n");
         return;
     }
-    // ²»Ìø¹ı¿Õ¸ñºÍ»»ĞĞ
+    // ä¸è·³è¿‡ç©ºæ ¼å’Œæ¢è¡Œ
     input >> noskipws;
     char ch;
     while (input >> ch)
@@ -82,20 +82,20 @@ void readChar(const string &filePath)
 }
 
 /**
- * È«Á¿¶ÁÈ¡
+ * å…¨é‡è¯»å–
  * @param filePath
  */
 void readBuf(const string &filePath)
 {
-    cout << endl << "È«Á¿¶ÁÈ¡" << endl;
+    cout << endl << "å…¨é‡è¯»å–" << endl;
     ifstream input;
     input.open(filePath);
     if (!input.is_open())
     {
-        printf("¶ÁÈ¡²»µ½Ö¸¶¨ÎÄ¼ş!!!\n");
+        printf("è¯»å–ä¸åˆ°æŒ‡å®šæ–‡ä»¶!!!\n");
         return;
     }
-    // È«Á¿¶ÁÈ¡
+    // å…¨é‡è¯»å–
     stringstream buffer;
     buffer << input.rdbuf();
     cout << buffer.str() << endl;
@@ -103,17 +103,17 @@ void readBuf(const string &filePath)
 }
 
 /**
- * ÖØ¸´¶Á
+ * é‡å¤è¯»
  * @param filePath
  */
 void repeatRead(const string &filePath)
 {
-    cout << endl << "µÚÒ»´Î¶Á" << endl;
+    cout << endl << "ç¬¬ä¸€æ¬¡è¯»" << endl;
     ifstream input;
     input.open(filePath);
     if (!input.is_open())
     {
-        printf("¶ÁÈ¡²»µ½Ö¸¶¨ÎÄ¼ş!!!\n");
+        printf("è¯»å–ä¸åˆ°æŒ‡å®šæ–‡ä»¶!!!\n");
         return;
     }
     stringstream buffer1;
@@ -122,7 +122,7 @@ void repeatRead(const string &filePath)
     input.clear();
     input.seekg(0);
 
-    cout << endl << "µÚ¶ş´Î¶Á" << endl;
+    cout << endl << "ç¬¬äºŒæ¬¡è¯»" << endl;
     stringstream buffer2;
     buffer2 << input.rdbuf();
     cout << buffer2.str() << endl;
@@ -130,7 +130,7 @@ void repeatRead(const string &filePath)
 }
 
 /**
- * Ëæ»ú·ÃÎÊÁ÷
+ * éšæœºè®¿é—®æµ
  * @param filePath
  */
 void readSkip(const string &filePath)
@@ -139,28 +139,28 @@ void readSkip(const string &filePath)
     input.open(filePath);
     if (!input.is_open())
     {
-        printf("¶ÁÈ¡²»µ½Ö¸¶¨ÎÄ¼ş!!!\n");
+        printf("è¯»å–ä¸åˆ°æŒ‡å®šæ–‡ä»¶!!!\n");
         return;
     }
-    // Ìøµ½HelloËùÔÚµÄÎ»ÖÃ£¬¼´¿ªÊ¼Î»ÖÃºóÒÆ13
+    // è·³åˆ°Helloæ‰€åœ¨çš„ä½ç½®ï¼Œå³å¼€å§‹ä½ç½®åç§»13
     input.seekg(13, ios::beg);
-    cout << "µ±Ç°Î»ÖÃ=" << input.tellg() << endl;
+    cout << "å½“å‰ä½ç½®=" << input.tellg() << endl;
     string content;
-    // Êä³ö10±éÖØ¸´µÄ¡®Hello¡¯
+    // è¾“å‡º10éé‡å¤çš„â€˜Helloâ€™
     for (int i = 0; i < 10; ++i)
     {
         input >> content;
         cout << content << endl;
-        // ¶ÁÍêÖ®ºó»ñÈ¡µ±Ç°Î»ÖÃ
+        // è¯»å®Œä¹‹åè·å–å½“å‰ä½ç½®
         int currIndex = input.tellg();
-        // Ìø»ØÈ¥ÖØ¸´¶Á
+        // è·³å›å»é‡å¤è¯»
         input.seekg(-(currIndex - 13), ios::beg);
     }
     input.close();
 }
 
 /**
- * ¶ş½øÖÆÁ÷¶ÁÈ¡
+ * äºŒè¿›åˆ¶æµè¯»å–
  * @param filePath
  */
 void readByte(const string &filePath)
@@ -169,7 +169,7 @@ void readByte(const string &filePath)
     input.open(filePath, ios::binary);
     if (!input.is_open())
     {
-        printf("¶ÁÈ¡²»µ½Ö¸¶¨ÎÄ¼ş!!!\n");
+        printf("è¯»å–ä¸åˆ°æŒ‡å®šæ–‡ä»¶!!!\n");
         return;
     }
     int size = 8;
@@ -177,12 +177,12 @@ void readByte(const string &filePath)
     {
         char arr[size];
         input.read(arr, size);
-        // Èç¹û¶ÁÈ¡µ½µÄ³¤¶ÈÎª0£¬ÔòÖ¤Ã÷¶ÁÈ¡Íê±ÏÁË
+        // å¦‚æœè¯»å–åˆ°çš„é•¿åº¦ä¸º0ï¼Œåˆ™è¯æ˜è¯»å–å®Œæ¯•äº†
         if (input.gcount() == 0)
         {
             break;
         }
-        cout << "¶ÁÈ¡Ò»´Î£¬ÄÚÈİ=" << arr << endl;
+        cout << "è¯»å–ä¸€æ¬¡ï¼Œå†…å®¹=" << arr << endl;
     }
     input.close();
 }
@@ -212,7 +212,7 @@ string ObjDemo::getInfo() const
 }
 
 /**
- * ¶ÔÏóÁ÷
+ * å¯¹è±¡æµ
  */
 void objectStream()
 {

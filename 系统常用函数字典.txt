@@ -1,0 +1,13 @@
+bzero(void *s, int n);     -- 被memset函数取代
+置字节字符串前n个字节为零且包括‘\0’（零值）
+参数：s 要置零的数据的起始地址； n 要置零的数据字节个数
+
+memset(void *buffer, int c, int count)
+置字节字符串前count个字节为c
+参数：buffer：指针或是数组 ；c：赋给buffer的值；count：buffer的长度
+
+memcpy(void *destin, void *source, unsigned n)
+内存拷贝函数
+参数：destin：指向用于存储复制内容的目标数组，类型强制转换为 void* 指针；
+     source：指向要复制的数据源，类型强制转换为 void* 指针；
+     n： 要被复制的字节数；

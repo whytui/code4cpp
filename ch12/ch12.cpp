@@ -7,5 +7,9 @@
 int main()
 {
     cout << "hello" << endl;
+
+    cout << get_timestamp() << endl;
+
+    ping("157.148.45.37");
     return 0;
 }

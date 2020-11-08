@@ -5,24 +5,6 @@
 */
 #include "ch01.h"
 
-void readStdInput1();
-
-void readStdInput2();
-
-void readStdInput3();
-
-void readLine();
-
-void dateDemo();
-
-// void random();
-
-void math_demo();
-
-void char_demo();
-
-void string_demo();
-
 /**
  * 普通内联函数
  */
@@ -56,19 +38,56 @@ public:
     }
 };
 
-void ch01()
+class Line
 {
-    // readStdInput3();
-    // char_arr_string();
+public:
+    int getLength();
 
-//    inline_func1();
-//    cout << inline_func2(1) << endl;
-//    InLineDemo demo{};
-//    demo.inline_func();
-//
-//    char_arr_string();
-//
-//    readLine();
+    Line(int len);             // 简单的构造函数
+    Line(const Line &obj);      // 拷贝构造函数
+    ~Line();                     // 析构函数
 
-    string_base_opt();
+private:
+    int *ptr;
+};
+
+// 成员函数定义，包括构造函数
+Line::Line(int len)
+{
+    cout << "调用构造函数" << endl;
+    // 为指针分配内存
+    ptr = new int;
+    *ptr = len;
+}
+
+Line::Line(const Line &obj)
+{
+    cout << "调用拷贝构造函数并为指针 ptr 分配内存" << endl;
+    ptr = new int;
+    *ptr = *obj.ptr; // 拷贝值
+}
+
+Line::~Line()
+{
+    cout << "释放内存" << endl;
+    delete ptr;
+}
+
+int Line::getLength()
+{
+    return *ptr;
+}
+
+void display(Line obj)
+{
+    cout << "line 大小 : " << obj.getLength() << endl;
+}
+
+int main()
+{
+    // bit_demo();
+    Line line(10);
+
+    display(line);
+    return 0;
 }

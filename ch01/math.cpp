@@ -1,12 +1,12 @@
 /*
-* ×÷Õß£ºÁõÊ±Ã÷
-* Ê±¼ä£º2020/6/13-0:55
-* ×÷ÓÃ£º
+* ä½œè€…ï¼šåˆ˜æ—¶æ˜Ž
+* æ—¶é—´ï¼š2020/6/13-0:55
+* ä½œç”¨ï¼š
 */
 #include "ch01.h"
 
 /**
- * »ù±¾ÊýÑ§º¯Êý
+ * åŸºæœ¬æ•°å­¦å‡½æ•°
  */
 void math_demo()
 {
@@ -15,14 +15,14 @@ void math_demo()
     printf("%lf\n", sin(PI));
     printf("%lf\n", cos(PI));
 
-    cout << "Ô²ÖÜÂÊ=" << M_PI << endl;
+    cout << "åœ†å‘¨çŽ‡=" << M_PI << endl;
 
-    cout << "ÏòÉÏÈ¡Õû=" << ceil(PI) << endl;
-    cout << "ÏòÏÂÈ¡Õû=" << floor(PI) << endl;
+    cout << "å‘ä¸Šå–æ•´=" << ceil(PI) << endl;
+    cout << "å‘ä¸‹å–æ•´=" << floor(PI) << endl;
 
     double ma = max(PI, M_E);
     double mi = min(PI, M_E);
-    cout << "×î´óÖµ=" << ma << endl;
-    cout << "×îÐ¡Öµ=" << mi << endl;
+    cout << "æœ€å¤§å€¼=" << ma << endl;
+    cout << "æœ€å°å€¼=" << mi << endl;
 }
 

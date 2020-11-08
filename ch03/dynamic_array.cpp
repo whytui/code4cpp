@@ -19,7 +19,7 @@ void dynamic_array()
     cout << v2->capacity() << endl;
     cout << v2->size() << endl;
 
-    v3.insert(v3.cend() - 2, 10);
+    // v3.insert(v3.cend() - 2, 10);
     cout << v3.capacity() << endl;
     cout << v3.size() << endl;
     delete v2;

@@ -1,36 +1,31 @@
-/*
-* 作者：刘时明
-* 时间：2020/7/5 0005-10:04
-* 作用：
-*/
 #include "ch04.h"
 
 enum Color
 {
-    RED, BLACK
+    RED = 5,
+    BLACK
 };
 
 string get_color(Color c);
 
-
 void enum_demo()
 {
     Color c{RED};
-
     cout << get_color(c) << endl;
     cout << get_color(BLACK) << endl;
+    cout << "enum Color size =" << sizeof(Color) << endl;
 }
 
 inline string get_color(Color c)
 {
     if (c == RED)
     {
-        return "红色";
+        return "绾㈣壊";
     } else if (c == BLACK)
     {
-        return "黑色";
+        return "榛戣壊";
     } else
     {
-        return "不能识别";
+        return "鍏朵粬棰滆壊";
     }
 }

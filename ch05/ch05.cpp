@@ -12,7 +12,7 @@ using namespace std;
 string Student::ID = "431224";
 int Student::CODE = 1998;
 
-void ch05()
+int main()
 {
     auto *student = new Student("刘时明", Men);
     student->show();
@@ -33,4 +33,5 @@ void ch05()
     {
         cout << "弹出一个=" << stack.pop() << endl;
     }
+    return 0;
 }

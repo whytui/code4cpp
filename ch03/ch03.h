@@ -13,8 +13,6 @@
 
 using namespace std;
 
-void ch03();
-
 void avg_demo();
 
 double getAvg(const int[], int);

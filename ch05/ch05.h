@@ -9,6 +9,4 @@
 
 #include "object.h"
 
-void ch05();
-
 #endif //CODE4CPP_CH05_H

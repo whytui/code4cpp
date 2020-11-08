@@ -10,10 +10,10 @@
 #include "book.h"
 #include <iostream>
 
-void ch04();
-
 void union_demo();
 
 void enum_demo();
+
+void func();
 
 #endif //CODE4CPP_CH04_H

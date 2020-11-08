@@ -11,7 +11,7 @@ void copyDemo();
 
 void collectionDemo();
 
-void ch11()
+int main()
 {
     collectionDemo();
 }

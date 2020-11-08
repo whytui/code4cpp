@@ -1,14 +1,14 @@
 /*
-* ×÷Õß£ºÁõÊ±Ã÷
-* Ê±¼ä£º2020/6/13-1:02
-* ×÷ÓÃ£º
+* ä½œè€…ï¼šåˆ˜æ—¶æ˜
+* æ—¶é—´ï¼š2020/6/13-1:02
+* ä½œç”¨ï¼š
 */
 #include "ch01.h"
 
 void change_string(string *str);
 
 /**
- * ×Ö·û»ù±¾Ê¹ÓÃ
+ * å­—ç¬¦åŸºæœ¬ä½¿ç”¨
  */
 void char_demo()
 {
@@ -20,9 +20,9 @@ void char_demo()
     cout << z << endl;
     cout << A << endl;
     cout << Z << endl;
-    // ²»ÉèÖÃÖÖ×ÓµÄ»°Ã¿´ÎÉú³ÉÖØ¸´µÄÖµ
+    // ä¸è®¾ç½®ç§å­çš„è¯æ¯æ¬¡ç”Ÿæˆé‡å¤çš„å€¼
     srand(time(nullptr));
-    // Éú³ÉËæ»ú×Ö·û
+    // ç”Ÿæˆéšæœºå­—ç¬¦
     for (int i = 0; i < 10; ++i)
     {
         int temp = rand();
@@ -38,21 +38,21 @@ void char_demo()
 }
 
 /**
- * ×Ö·û´®
+ * å­—ç¬¦ä¸²
  */
 void string_demo()
 {
-    cout << "ÊäÈëÄãµÄÃû×Ö£º" << endl;
-    // Ê¹ÓÃcharÊı×é´ïµ½StingµÄĞ§¹û
+    cout << "è¾“å…¥ä½ çš„åå­—ï¼š" << endl;
+    // ä½¿ç”¨charæ•°ç»„è¾¾åˆ°Stingçš„æ•ˆæœ
     char *charArr[10];
     scanf("%s", &charArr);
-    printf("ÄãºÃ£¡%s\n", charArr);
+    printf("ä½ å¥½ï¼%s\n", charArr);
 
     string name;
-    // ¶ÁÈ¡×Ö·û´®ÊäÈë
+    // è¯»å–å­—ç¬¦ä¸²è¾“å…¥
     // scanf("%s",name.c_str());
-    // cin >> name; ÒÔ¿Õ°×·ûÎª½áÊø
-    // getline(cin,name,'\n'); ÒÔ»»ĞĞÎª½áÊø
+    // cin >> name; ä»¥ç©ºç™½ç¬¦ä¸ºç»“æŸ
+    // getline(cin,name,'\n'); ä»¥æ¢è¡Œä¸ºç»“æŸ
 
     string str = "hello world!";
 
@@ -61,8 +61,8 @@ void string_demo()
     change_string(&*&*(&str));
 
     cout << str << endl;
-    cout << "str³¤¶È=" << str.length() << endl;
-    cout << "strÈİÁ¿=" << str.capacity() << endl;
+    cout << "stré•¿åº¦=" << str.length() << endl;
+    cout << "strå®¹é‡=" << str.capacity() << endl;
 
     printf("%s\n", str.c_str());
 
@@ -70,7 +70,7 @@ void string_demo()
 }
 
 /**
- * Ö¸Õë´«µİ´ïµ½ĞŞ¸ÄµÄÄ¿µÄ£¬´«Èëstring&ÀàĞÍÒ²¿ÉÒÔ´ïµ½ÏàÍ¬×÷ÓÃ
+ * æŒ‡é’ˆä¼ é€’è¾¾åˆ°ä¿®æ”¹çš„ç›®çš„ï¼Œä¼ å…¥string&ç±»å‹ä¹Ÿå¯ä»¥è¾¾åˆ°ç›¸åŒä½œç”¨
  * @param str
  */
 void change_string(string *str)
@@ -85,7 +85,7 @@ void char_arr_string()
     cout << c << endl;
     cout << str.c_str() << endl;
 
-    // ÓÉÓÚ×Ö·û´®ÒÔ '\0' ½áÎ²£¬ËùÒÔÊµ¼Ê×î´ó³¤¶È»á¼õÒ»
+    // ç”±äºå­—ç¬¦ä¸²ä»¥ '\0' ç»“å°¾ï¼Œæ‰€ä»¥å®é™…æœ€å¤§é•¿åº¦ä¼šå‡ä¸€
     char maxLen[5] = "hell";
     char *pointStr = (char *) "hello world";
 
@@ -97,26 +97,26 @@ void char_arr_string()
 }
 
 /**
- * ×Ö·û´®»ù±¾³£ÓÃ²Ù×÷
+ * å­—ç¬¦ä¸²åŸºæœ¬å¸¸ç”¨æ“ä½œ
  */
 void string_base_opt()
 {
     char str1[10] = "hello";
     char str2[10];
-    // ½«str1µÄÖµ¸´ÖÆ¸østr1
+    // å°†str1çš„å€¼å¤åˆ¶ç»™str1
     strcpy(str2, str1);
     cout << str2 << endl;
 
 
     float pi = 3.14F;
-    // ÊıÖµ×ª×Ö·û´®
+    // æ•°å€¼è½¬å­—ç¬¦ä¸²
     string str = to_string(pi);
-    // ×Ö·û´®×ªÊıÖµ
+    // å­—ç¬¦ä¸²è½¬æ•°å€¼
     double pi_d = atof(str.c_str());
     cout << pi_d << endl;
     cout << atoi(str.c_str()) << endl;
 
-    // ±È½Ï×Ö·û´®ÄÚÈİÊÇ·ñÏàµÈ
+    // æ¯”è¾ƒå­—ç¬¦ä¸²å†…å®¹æ˜¯å¦ç›¸ç­‰
     if (!strcmp(str1, str2))
     {
         cout << "str1 == str2" << endl;
@@ -125,14 +125,14 @@ void string_base_opt()
         cout << "str1 != str2" << endl;
     }
 
-    // ×Ö·û´®¸ñÊ½»¯
+    // å­—ç¬¦ä¸²æ ¼å¼åŒ–
     char forMate[1];
     int result = sprintf(forMate, "%s%.4f", str2, pi);
     cout << "result=" << result << endl;
     cout << forMate << endl;
 
-    // GBK±àÂëÏÂ±éÀú°üÀ¨ÖĞÎÄµÄ×Ö·û
-    char *c = (char *) "hello,ÄãºÃ";
+    // GBKç¼–ç ä¸‹éå†åŒ…æ‹¬ä¸­æ–‡çš„å­—ç¬¦
+    char *c = (char *) "hello,ä½ å¥½";
     for (int i = 0; i < strlen(c); ++i)
     {
         if (c[i] > 0)
