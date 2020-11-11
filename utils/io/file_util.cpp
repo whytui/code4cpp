@@ -33,7 +33,7 @@ void file_list(const string &path, vector<string> *files)
  */
 vector<string> *file_list(const string &path)
 {
-    auto *list=new vector<string>;
+    auto *list = new vector<string>;
     file_list(path, list);
     return list;
 }
@@ -44,29 +44,7 @@ vector<string> *file_list(const string &path)
  */
 void make_dirs(const string &dirs)
 {
-//    int index;
-//    string temp = dirs;
-//    string appendStr;
-//    while ((index = temp.find('\\')) != -1)
-//    {
-//        string sub = temp.substr(0, index);
-//        if (appendStr.length() != 0)
-//        {
-//            appendStr.append("\\");
-//        }
-//        appendStr.append(sub);
-//        if (_access(appendStr.c_str(), 0) == -1)
-//        {
-//            mkdir(appendStr.c_str());
-//        }
-//        temp = temp.substr(index + 1, temp.length());
-//    }
-//    // ׷�����һ��
-//    appendStr.append("\\").append(temp.substr(index + 1, temp.length()));
-//    if (_access(appendStr.c_str(), 0) == -1)
-//    {
-//        mkdir(appendStr.c_str());
-//    }
+
 }
 
 /**
@@ -74,19 +52,19 @@ void make_dirs(const string &dirs)
  * @param dist
  * @param src
  */
-void copy(const string &dist,const string &src)
+void copy(const string &dist, const string &src)
 {
-    if(is_dir(src))
+    if (is_dir(src))
     {
         make_dirs(dist);
-        auto v= file_list(src);
-        for(auto &i:*v)
+        auto v = file_list(src);
+        for (auto &i:*v)
         {
-            string dist_temp=dist;
-            string src_temp=src;
+            string dist_temp = dist;
+            string src_temp = src;
             dist_temp.append("\\").append(i);
             src_temp.append("\\").append(i);
-            if(is_dir(src_temp))
+            if (is_dir(src_temp))
             {
                 // ��Ŀ¼
                 copy(dist_temp, src_temp);
@@ -134,8 +112,8 @@ void copy_file(const string &dist, const string &src)
  */
 bool is_dir(const string &path)
 {
-    DIR *dir=opendir(path.c_str());
-    bool result= dir!= nullptr;
+    DIR *dir = opendir(path.c_str());
+    bool result = dir != nullptr;
     closedir(dir);
     return result;
 }

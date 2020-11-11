@@ -5,17 +5,17 @@
 #include <ctime>
 #include "date.h"
 
-MyDate *MyDate::now()
+utils::MyDate *utils::MyDate::now()
 {
     return new MyDate(time(nullptr));
 }
 
-MyDate::MyDate(long time)
+utils::MyDate::MyDate(long time)
 {
     this->t = time;
 }
 
-long MyDate::unix_time() const
+long utils::MyDate::unix_time() const
 {
     return this->t;
 }

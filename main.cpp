@@ -1,4 +1,5 @@
-#include <iostream>
+#include <lang.h>
+#include <io.h>
 #include "main.h"
 
 using namespace std;
@@ -18,7 +19,7 @@ int main(int argc, char *argv[])
     cout << "你" << "配" << "吗？" << endl;
     cout << 0xFF << endl;
 
-    auto *date = MyDate::now();
+    auto *date = utils::MyDate::now();
     cout << date->unix_time() << endl;
 
     auto *file = new utils::MyFile("../resource/hello.java");

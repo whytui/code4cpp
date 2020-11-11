@@ -11,8 +11,6 @@ message(STATUS "Project root directory is: ${REDIS_ROOT}")
 # windows环境
 # link_libraries(ws2_32) -static-libstdc++
 
-add_subdirectory(utils)
-
 message(STATUS "${CMAKE_SYSTEM_NAME}")
 
 add_executable(code4cpp main.cpp main.h)
@@ -77,18 +75,20 @@ message(STATUS "Generating CH12...")
 set(CH12 ch12/ch12.cpp ch12/ch12.h ch12/mutex.cpp ch12/thread_pool.cpp ch12/thread_pool.h ch12/ping.cpp ch12/ping.h)
 add_executable(ch12 ${CH12})
 
-# windows
-message(STATUS "Generating windows...")
-set(WINDOWS windows/main.cpp windows/main.h windows/socket_client.cpp windows/socket_client.h)
-add_executable(windows ${WINDOWS})
+add_subdirectory(utils)
+add_subdirectory(algorithm)
+add_subdirectory(windows)
 
-# algorithm
-message(STATUS "Generating algorithm...")
-set(ALGORITHM algorithm/sort.cpp algorithm/sort.h algorithm/array_list.h algorithm/list.h algorithm/algorithm.cpp algorithm/algorithm.h algorithm/error.h algorithm/linked_list.cpp algorithm/one_way_list.cpp algorithm/binary_tree.cpp)
-add_executable(algorithm ${ALGORITHM})
+target_include_directories(code4cpp
+        PRIVATE ${REDIS_ROOT}/utils/lang
+        PRIVATE ${REDIS_ROOT}/utils/net
+        PRIVATE ${REDIS_ROOT}/utils/io)
 
-target_include_directories(code4cpp PRIVATE ${REDIS_ROOT}/utils)
+target_link_libraries(code4cpp
+        PRIVATE pthread
+        PRIVATE m
+        PRIVATE lang
+        PRIVATE net
+        PRIVATE io)
 
-target_link_libraries(code4cpp PRIVATE pthread PRIVATE m PRIVATE utils)
-
-link_directories(utils/)
+link_directories(utils/lang/ utils/net/ utils/io/)
