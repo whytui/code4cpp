@@ -4,7 +4,6 @@
 #include <bits/stdc++.h>
 #include "list.h"
 #include "error.h"
-#include "algorithm.h"
 
 template<typename T>
 class ArrayList : public List<T>
@@ -36,9 +35,9 @@ public:
         delete[] this->data;
     }
 
-    int size() const override;
+    [[nodiscard]] int size() const override;
 
-    bool empty() const override;
+    [[nodiscard]] bool empty() const override;
 
     T &get(int index) override;
 
@@ -145,7 +144,7 @@ void ArrayList<T>::checkIndex(int index)
 {
     if (index < 0 || index >= this->c_size)
     {
-        throw illegalParameterValue((char *) "???????");
+        throw illegalParameterValue((char *) "数组越界");
     }
 }
 

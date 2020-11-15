@@ -1,10 +1,10 @@
+#include "error.h"
+
 /*
 * 作者：刘时明
 * 时间：2020/6/17-21:52
 * 作用：单向链表
 */
-#include "algorithm.h"
-
 template<typename T>
 struct ChainNode
 {
@@ -45,7 +45,7 @@ private:
     {
         if (index < 0 || index >= this->c_size)
         {
-            throw illegalParameterValue((char *) "索引越界");
+            throw illegalParameterValue("索引越界");
         }
     }
 
@@ -53,7 +53,7 @@ private:
     {
         if (index < 0 || index > this->c_size)
         {
-            throw illegalParameterValue((char *) "索引越界");
+            throw illegalParameterValue("索引越界");
         }
     }
 
@@ -66,7 +66,6 @@ public:
 
     ~ChainList()
     {
-        cout << "析构函数调用" << endl;
         while (head != nullptr)
         {
             ChainNode<T> *nextNode = head->next;
@@ -166,18 +165,18 @@ public:
     }
 };
 
-void ChainDemo()
-{
-    auto *list = new ChainList<int>();
-    for (int i = 0; i < 100; ++i)
-    {
-        list->add(i);
-    }
-    list->add(2, 10000);
-    list->add(0, -1);
-    for (int j = 0; j < list->size(); ++j)
-    {
-        cout << list->get(j) << endl;
-    }
-    delete list;
-}
+//void ChainDemo()
+//{
+//    auto *list = new ChainList<int>();
+//    for (int i = 0; i < 100; ++i)
+//    {
+//        list->add(i);
+//    }
+//    list->add(2, 10000);
+//    list->add(0, -1);
+//    for (int j = 0; j < list->size(); ++j)
+//    {
+//        cout << list->get(j) << endl;
+//    }
+//    delete list;
+//}

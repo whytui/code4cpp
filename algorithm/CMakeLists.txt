@@ -9,8 +9,6 @@ set(src
         ${CMAKE_CURRENT_SOURCE_DIR}/sort.h
         ${CMAKE_CURRENT_SOURCE_DIR}/array_list.h
         ${CMAKE_CURRENT_SOURCE_DIR}/list.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/algorithm.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/algorithm.h
         ${CMAKE_CURRENT_SOURCE_DIR}/error.h
         ${CMAKE_CURRENT_SOURCE_DIR}/linked_list.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/one_way_list.cpp

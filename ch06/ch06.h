@@ -7,8 +7,6 @@
 #ifndef CODE4CPP_CH06_H
 #define CODE4CPP_CH06_H
 
-void ch06();
-
 int default_args(int, int, int);
 
 void point();

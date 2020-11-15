@@ -16,6 +16,8 @@ void ptr_demo();
 
 void life_test();
 
+void autoFunc();
+
 /**
  * C++函数支持默认参数，而且必须在末尾位置，且可以定义多个
  * @param args
@@ -40,7 +42,7 @@ void ptr_demo2()
     cout << arr << endl;
 }
 
-void ch06()
+int main()
 {
 //    point();
 //    int arr[] = {1, 2, 3};
@@ -59,7 +61,9 @@ void ch06()
 //
 //    func_point2();
 
-    life_test();
+    autoFunc();
+
+    return 0;
 }
 
 void point()

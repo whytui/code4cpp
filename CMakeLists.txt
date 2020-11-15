@@ -8,9 +8,6 @@ set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -finput-charset='utf8' -mcmodel=large
 get_filename_component(REDIS_ROOT "${CMAKE_CURRENT_SOURCE_DIR}" ABSOLUTE)
 message(STATUS "Project root directory is: ${REDIS_ROOT}")
 
-# windows环境
-# link_libraries(ws2_32) -static-libstdc++
-
 message(STATUS "${CMAKE_SYSTEM_NAME}")
 
 add_executable(code4cpp main.cpp main.h)
@@ -42,7 +39,7 @@ add_executable(ch05 ${CH05})
 
 # 06
 message(STATUS "Generating CH06...")
-set(CH06 ch06/ch06.cpp ch06/ch06.h ch06/free.cpp ch06/heap.cpp ch06/ptr.cpp ch06/func.cpp ch06/life.cpp)
+set(CH06 ch06/auto.cpp ch06/ch06.cpp ch06/ch06.h ch06/free.cpp ch06/heap.cpp ch06/ptr.cpp ch06/func.cpp ch06/life.cpp)
 add_executable(ch06 ${CH06})
 
 # 07

@@ -5,6 +5,6 @@
 #ifndef CODE4CPP_MAIN_H
 #define CODE4CPP_MAIN_H
 
-#include "algorithm.h"
+#include "array_list.h"
 
 #endif //CODE4CPP_MAIN_H

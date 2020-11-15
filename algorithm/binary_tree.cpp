@@ -3,8 +3,6 @@
 * 时间：2020/6/17-22:55
 * 作用：
 */
-#include "algorithm.h"
-
 template<typename K, typename V>
 class BinTreeNode
 {
@@ -103,11 +101,10 @@ public:
         return true;
     }
 };
-
-void BinaryTreeDemo()
-{
-    auto *tree = new BinaryTree<int, int>();
-    tree->insert(1, 4);
-    tree->insert(2, 8);
-    cout << tree->size() << endl;
-}
+//void BinaryTreeDemo()
+//{
+//    auto *tree = new BinaryTree<int, int>();
+//    tree->insert(1, 4);
+//    tree->insert(2, 8);
+//    cout << tree->size() << endl;
+//}

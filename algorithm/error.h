@@ -3,12 +3,12 @@
 * 时间：2020/6/15-23:42
 * 作用：
 */
-
 #ifndef CODE4CPP_ERROR_H
 #define CODE4CPP_ERROR_H
 
 #include <string>
 #include <iostream>
+#include <utility>
 
 using namespace std;
 
@@ -21,9 +21,9 @@ public:
     illegalParameterValue() : errorMsg("illegal parameter value")
     {}
 
-    illegalParameterValue(char *theMessage)
+    illegalParameterValue(string theMessage)
     {
-        this->errorMsg = theMessage;
+        this->errorMsg = std::move(theMessage);
     }
 
     void outputMessage()
