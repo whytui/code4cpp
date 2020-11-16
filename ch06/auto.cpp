@@ -5,7 +5,6 @@
 #include <iostream>
 #include <memory>
 
-
 /**
 智能指针，对指针的一层包装，不需要使用delete去释放指针
  4种类型：

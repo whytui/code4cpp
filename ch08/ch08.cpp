@@ -8,7 +8,7 @@
 template<class T>
 void hello(T value);
 
-void ch08()
+int main()
 {
     hello("123");
 
@@ -19,6 +19,7 @@ void ch08()
     hello('1');
 
     spaces_demo();
+    return 0;
 }
 
 /**
