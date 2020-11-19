@@ -75,6 +75,7 @@ add_executable(ch12 ${CH12})
 add_subdirectory(utils)
 add_subdirectory(algorithm)
 add_subdirectory(windows)
+add_subdirectory(ch13)
 
 target_include_directories(code4cpp
         PRIVATE ${REDIS_ROOT}/utils/lang
