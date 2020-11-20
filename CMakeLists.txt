@@ -3,7 +3,8 @@ project(code4cpp VERSION 3.17)
 
 set(CMAKE_CXX_STANDARD 20)
 
-set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -finput-charset='utf8' -mcmodel=large")
+# -static-libgcc
+set(CMAKE_EXE_LINKER_FLAGS "-finput-charset='utf8' -mcmodel=large")
 
 get_filename_component(REDIS_ROOT "${CMAKE_CURRENT_SOURCE_DIR}" ABSOLUTE)
 message(STATUS "Project root directory is: ${REDIS_ROOT}")
@@ -74,7 +75,6 @@ add_executable(ch12 ${CH12})
 
 add_subdirectory(utils)
 add_subdirectory(algorithm)
-add_subdirectory(windows)
 add_subdirectory(ch13)
 
 target_include_directories(code4cpp

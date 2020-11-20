@@ -11,7 +11,7 @@ void print_thread_info()
 
 int main()
 {
-    // future_demo();
+    future_demo();
 
     // add_1_demo();
 

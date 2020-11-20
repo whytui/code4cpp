@@ -5,17 +5,17 @@
 #include "main.h"
 #include <future>
 
-int get_ret()
+string get_ret(const string& name)
 {
-    cout << "return_hello" << endl;
-    return 10;
+    sleep(1);
+    return "hello:"+name;
 }
 
 void future_demo()
 {
     cout << "----------" << endl;
     // 获取线程返回值
-    future<int> result = async(get_ret);
+    future<string> result = async(get_ret,string("lsm"));
     cout << "in" << endl;
     // result.wait();
     cout << "result=" << result.get() << endl;
