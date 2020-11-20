@@ -13,12 +13,10 @@ string get_ret(const string& name)
 
 void future_demo()
 {
-    cout << "----------" << endl;
     // 获取线程返回值
     future<string> result = async(get_ret,string("lsm"));
     cout << "in" << endl;
     // result.wait();
     cout << "result=" << result.get() << endl;
-    cout << "----------" << endl;
 }
 

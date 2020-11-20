@@ -4,18 +4,13 @@
 
 ---
 
-#### 编译器：cygwin 64位
-
-#### 关于乱码
-设置Clion编码为UTF8后，控制台输出乱码，解决方式有以下：
-1. 设置页面编码为GBK；
-2. 设置页面编码为UTF8，同时操作系统编码也设置为UTF8；
-3. 使用MinGW编译器时，设置UTF8会乱码，切换成cygwin后没事了；
+#### 编译器：master 
+1. master分支 mac环境的64位gcc
+2. win32分支 windows环境的64位vs2019
 
 #### 分支
-1. master 基础的通用知识
+1. master 基础的通用知识&&linux平台
 2. win32 windows32平台相关
-3. linux linux平台相关
 
 ### 目录说明
 1. ch01 基本API和预编译指令

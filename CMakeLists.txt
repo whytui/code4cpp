@@ -68,13 +68,9 @@ message(STATUS "Generating CH11...")
 set(CH11 ch11/ch11.cpp ch11/ch11.h ch11/accumulate.cpp ch11/copy.cpp ch11/collection.cpp)
 add_executable(ch11 ${CH11})
 
-# 12
-message(STATUS "Generating CH12...")
-set(CH12 ch12/ch12.cpp ch12/ch12.h ch12/mutex.cpp ch12/thread_pool.cpp ch12/thread_pool.h ch12/ping.cpp ch12/ping.h)
-add_executable(ch12 ${CH12})
-
 add_subdirectory(utils)
 add_subdirectory(algorithm)
+add_subdirectory(ch12)
 add_subdirectory(ch13)
 
 target_include_directories(code4cpp

@@ -11,10 +11,15 @@ void print_thread_info()
 
 int main()
 {
-    future_demo();
+    print_thread_info();
+    // future_demo();
 
     // add_1_demo();
 
-    add_2_demo();
+//    add_2_demo();
+
+    thread_print();
+
+    sleep(2);
     return 0;
 }

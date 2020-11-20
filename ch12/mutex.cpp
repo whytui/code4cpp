@@ -4,7 +4,7 @@
 */
 #include <mutex>
 #include <thread>
-#include "ch12.h"
+#include "main.h"
 
 //定义一个全局变量，当作计数器用于累加
 volatile int counter(0);
