@@ -14,4 +14,10 @@
 
 using namespace std;
 
+void accumulateDemo();
+
+void copyDemo();
+
+void collectionDemo();
+
 #endif //CODE4CPP_CH11_H

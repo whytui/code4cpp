@@ -9,5 +9,5 @@ set(src
         ${CMAKE_CURRENT_SOURCE_DIR}/ping.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/ping.h
         ${CMAKE_CURRENT_SOURCE_DIR}/thread_pool.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/thread_pool.h)
+        ${CMAKE_CURRENT_SOURCE_DIR}/thread_pool.h sever.cpp sever.h)
 add_executable(ch12 ${src})

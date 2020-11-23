@@ -1,7 +1,11 @@
 1.C++只会为const引用创建临时对象；
 
-2.detach线程传递引用、指针；
+2.detach线程传递引用、指针注意被回收；
 
+3.atomic类，不是所有运算操作都是原子的；
+
+
+源码编译：
 mysql
 https://www.cnblogs.com/deverz/p/13552763.html
 https://www.jianshu.com/p/9f924c3214f0

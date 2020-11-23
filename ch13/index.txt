@@ -13,3 +13,10 @@ detach和join是互斥的，一个线程只能执行其中一个方法
 
 4.joinable
 返回该线程是否可以被join或detach
+
+知识点：
+1.创建线程的几种方式，包括使用future和promise获取返回值；
+2.join与detach区别，detach线程的引用和指针陷阱；
+3.mutex互斥锁和lock_guard，超时以及可重入；
+4.传递类、智能指针作为线程参数和普通类型的区别；
+5.unique_lock所有权，线程wait和notify；

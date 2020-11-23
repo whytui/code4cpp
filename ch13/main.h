@@ -9,6 +9,7 @@
 #include <iostream>
 #include <thread>
 #include <unistd.h>
+#include <mutex>
 
 using namespace std;
 
@@ -25,5 +26,13 @@ void future_demo();
 void add_1_demo();
 
 void add_2_demo();
+
+void add_3_demo();
+
+void test_mutex();
+
+void notify_demo();
+
+void promise_demo();
 
 #endif //CODE4CPP_MAIN_H

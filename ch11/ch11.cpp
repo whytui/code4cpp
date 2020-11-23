@@ -5,12 +5,6 @@
 */
 #include "ch11.h"
 
-void accumulateDemo();
-
-void copyDemo();
-
-void collectionDemo();
-
 int main()
 {
     collectionDemo();
