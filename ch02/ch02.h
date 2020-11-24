@@ -25,4 +25,6 @@ void binary_read();
 
 void binary_write();
 
+string GenerateUUID();
+
 #endif //CODE4CPP_CH02_H
