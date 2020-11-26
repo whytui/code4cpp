@@ -5,8 +5,9 @@
 ---
 
 #### 编译器：master 
-1. master分支 mac环境的64位gcc
+1. master分支 mac环境的64位clang
 2. win32分支 windows环境的64位vs2019
+3. linux分支 linux环境的64位gcc
 
 #### 分支
 1. master 基础的通用知识&&linux平台
