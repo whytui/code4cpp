@@ -10,6 +10,8 @@ int main()
     // read("../resource/hello.java");
     // maze("../resource/maze.txt");
 
-    binary_read();
+    // binary_read();
+
+    cout << GenerateUUID() << endl;
     return 0;
 }

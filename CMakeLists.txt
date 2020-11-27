@@ -20,7 +20,7 @@ add_executable(ch01 ${CH01})
 
 # 02
 message(STATUS "Generating CH02...")
-set(CH02 ch02/ch02.cpp ch02/ch02.h ch02/maze.cpp ch02/read.cpp ch02/write.cpp ch02/binary.cpp)
+set(CH02 ch02/ch02.cpp ch02/ch02.h ch02/maze.cpp ch02/read.cpp ch02/write.cpp ch02/binary.cpp ch02/platform.cpp)
 add_executable(ch02 ${CH02})
 
 # 03
