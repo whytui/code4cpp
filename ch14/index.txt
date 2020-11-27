@@ -1,0 +1,5 @@
+C++内存布局
+
+new和malloc，delete和free的关系：
+    new A()      operator new() -》 malloc -》 构造函数（前提是有）
+    delete a     析构函数（前提是有） -》 operator delete() -》 free
