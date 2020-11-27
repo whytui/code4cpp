@@ -72,6 +72,7 @@ add_subdirectory(utils)
 add_subdirectory(algorithm)
 add_subdirectory(ch12)
 add_subdirectory(ch13)
+add_subdirectory(ch14)
 
 target_include_directories(code4cpp
         PRIVATE ${REDIS_ROOT}/utils/lang
