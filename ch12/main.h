@@ -16,4 +16,6 @@ int ping(const char *ip);
 
 double get_timestamp();
 
+void time_server(int argc, char **argv);
+
 #endif //CODE4CPP_MAIN_H

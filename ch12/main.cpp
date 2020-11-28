@@ -4,12 +4,13 @@
 */
 #include "main.h"
 
-int main()
+int main(int argc, char **argv)
 {
     cout << "hello" << endl;
 
     cout << get_timestamp() << endl;
 
-    ping("157.148.45.37");
+    // ping("157.148.45.37");
+    time_server(argc, argv);
     return 0;
 }
