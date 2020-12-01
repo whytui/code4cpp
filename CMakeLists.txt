@@ -13,11 +13,6 @@ message(STATUS "${CMAKE_SYSTEM_NAME}")
 
 add_executable(code4cpp main.cpp main.h)
 
-# 01
-message(STATUS "Generating CH01...")
-set(CH01 ch01/ch01.cpp ch01/ch01.h ch01/input.cpp ch01/date.cpp ch01/math.cpp ch01/string.cpp ch01/bit_operation.cpp)
-add_executable(ch01 ${CH01})
-
 # 02
 message(STATUS "Generating CH02...")
 set(CH02 ch02/ch02.cpp ch02/ch02.h ch02/maze.cpp ch02/read.cpp ch02/write.cpp ch02/binary.cpp ch02/platform.cpp)
@@ -70,6 +65,7 @@ add_executable(ch11 ${CH11})
 
 add_subdirectory(utils)
 add_subdirectory(algorithm)
+add_subdirectory(ch01)
 add_subdirectory(ch12)
 add_subdirectory(ch13)
 add_subdirectory(ch14)

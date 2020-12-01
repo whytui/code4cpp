@@ -3,7 +3,6 @@
 //
 
 #include "main.h"
-#include <cstdio>
 
 int main()
 {

@@ -33,4 +33,6 @@ void string_demo();
 
 void bit_demo();
 
+void const_demo();
+
 #endif

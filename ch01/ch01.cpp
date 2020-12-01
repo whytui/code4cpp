@@ -86,8 +86,10 @@ void display(Line obj)
 int main()
 {
     // bit_demo();
-    Line line(10);
+    // Line line(10);
 
-    display(line);
+    // display(line);
+
+    const_demo();
     return 0;
 }

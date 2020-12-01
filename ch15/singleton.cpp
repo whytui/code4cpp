@@ -18,7 +18,6 @@ const Singleton *Singleton::getInstance()
 void check_singleton()
 {
     auto obj1 = Singleton::getInstance();
-
     auto obj2 = Singleton::getInstance();
 
     printf("%p \n",obj1);
