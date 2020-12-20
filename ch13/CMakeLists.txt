@@ -9,5 +9,9 @@ set(src
         ${CMAKE_CURRENT_SOURCE_DIR}/create_class.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/thread_print.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/future.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/atomic.cpp mutex.cpp notify.cpp promise.cpp)
+        ${CMAKE_CURRENT_SOURCE_DIR}/atomic.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/mutex.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/notify.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/promise.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/join.cpp)
 add_executable(ch13 ${src})

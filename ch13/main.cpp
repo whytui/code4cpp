@@ -26,6 +26,7 @@ demo* get_i()
 
 int main()
 {
+    join_demo();
     auto *d=get_i();
     printf("%p\n",&d->id);
 

@@ -35,4 +35,6 @@ void notify_demo();
 
 void promise_demo();
 
+void join_demo();
+
 #endif //CODE4CPP_MAIN_H
