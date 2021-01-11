@@ -5,7 +5,7 @@
 
 /**
  * ��ȡĿ¼�µ��ļ��б�
- * @param root
+ * @param path
  * @param files
  */
 void file_list(const string &path, vector<string> *files)

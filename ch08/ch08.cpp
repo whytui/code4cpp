@@ -30,5 +30,13 @@ int main()
 template<class T>
 void hello(T value)
 {
+    if (is_pointer<T>::value)
+    {
+        cout << "指针类型" << endl;
+    } else
+    {
+        cout << "非指针类型" << endl;
+    }
+
     cout << typeid(T).name() << ":" << value << endl;
 }
