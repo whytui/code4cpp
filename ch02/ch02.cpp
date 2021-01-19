@@ -13,5 +13,7 @@ int main()
     // binary_read();
 
     cout << GenerateUUID() << endl;
+
+    dir_demo();
     return 0;
 }

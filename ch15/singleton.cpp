@@ -6,11 +6,18 @@
 
 Singleton *Singleton::instance = nullptr;
 
+std::mutex Singleton::lock = std::mutex{};
+
 const Singleton *Singleton::getInstance()
 {
     if (instance == nullptr)
     {
-        instance = new Singleton;
+        lock.lock();
+        if (instance == nullptr)
+        {
+            instance = new Singleton;
+        }
+        lock.unlock();
     }
     return instance;
 }
@@ -20,6 +27,6 @@ void check_singleton()
     auto obj1 = Singleton::getInstance();
     auto obj2 = Singleton::getInstance();
 
-    printf("%p \n",obj1);
-    printf("%p \n",obj2);
+    printf("%p \n", obj1);
+    printf("%p \n", obj2);
 }

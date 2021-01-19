@@ -4,7 +4,7 @@
 #include "file_util.h"
 
 /**
- * ��ȡĿ¼�µ��ļ��б�
+ * 获取文件列表
  * @param path
  * @param files
  */
@@ -27,7 +27,7 @@ void file_list(const string &path, vector<string> *files)
 }
 
 /**
- * ��ȡĿ¼�µ��ļ��б�
+ * 获取文件列表
  * @param root
  * @return
  */
@@ -48,7 +48,7 @@ void make_dirs(const string &dirs)
 }
 
 /**
- * �����ļ�
+ * 拷贝文件
  * @param dist
  * @param src
  */
@@ -82,7 +82,7 @@ void copy(const string &dist, const string &src)
 }
 
 /**
- * ʹ�ö�����������ļ�����
+ * 拷贝文件
  * @param dist
  * @param src
  */
@@ -106,7 +106,7 @@ void copy_file(const string &dist, const string &src)
 }
 
 /**
- * �ж�ָ��·���Ƿ�ΪĿ¼
+ * 判断是否目录
  * @param path
  * @return
  */

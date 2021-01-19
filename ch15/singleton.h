@@ -8,6 +8,7 @@
  */
 
 #include <cstdio>
+#include <mutex>
 
 class Singleton
 {
@@ -17,6 +18,8 @@ private:
     ~Singleton() = default;
 
     static Singleton* instance;
+
+    static std::mutex lock;
 
 public:
     static const Singleton* getInstance();

@@ -27,4 +27,6 @@ void binary_write();
 
 string GenerateUUID();
 
+void dir_demo();
+
 #endif //CODE4CPP_CH02_H
