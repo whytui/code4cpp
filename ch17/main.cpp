@@ -1,6 +1,3 @@
-//
-// Created by 刘时明 on 2020/12/24.
-//
 #include <fcntl.h>
 #include <cstdio>
 
