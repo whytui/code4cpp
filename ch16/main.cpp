@@ -1,12 +1,16 @@
 //
 // Created by 刘时明 on 2020/12/24.
 //
-#include <fcntl.h>
-#include <cstdio>
+#include "main.h"
 
 int main()
 {
-    int fd = open("/Users/liushiming/CLionProjects/code4cpp/ch16/main.cpp", O_RDWR);
-    printf("%d \n", fd);
+    Object2Json();
+
+    JsonParse();
+
+    SqlQuery("select id,nickname from t_user");
+
+    SqlInsert("INSERT INTO t_demo(id,`name`,age) VALUES(?,?,?)", 3, 9, "lsm", 23);
     return 0;
 }

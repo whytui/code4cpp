@@ -1,0 +1,9 @@
+[requires]
+cjson/1.7.12
+libmysqlclient/8.0.17
+jsoncpp/1.9.4
+threadpool/20140926
+redis-plus-plus/1.2.1
+
+[generators]
+cmake
