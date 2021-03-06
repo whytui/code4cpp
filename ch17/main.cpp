@@ -1,9 +1,20 @@
-#include <fcntl.h>
-#include <cstdio>
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+#ifdef __ANDROID__
+string hello("hello android");
+#elif __linux__
+string hello("hello linux");
+#elif _WIN32
+string hello("hello windows");
+#elif __unix__
+string hello("hello unix");
+#endif
 
 int main()
 {
-    int fd = open("/Users/liushiming/CLionProjects/code4cpp/ch16/main.cpp", O_RDWR);
-    printf("%d \n", fd);
+    cout << hello << endl;
     return 0;
 }
