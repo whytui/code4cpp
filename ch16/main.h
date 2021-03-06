@@ -19,6 +19,6 @@ void SqlQuery(const string &sql);
 
 void SqlInsert(const string &sql, int count, ...);
 
-void test();
+void RedisTest();
 
 #endif //CODE4CPP_MAIN_H
