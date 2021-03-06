@@ -1,7 +1,7 @@
 #ifndef CODE4CPP_ARRAY_LIST_H
 #define CODE4CPP_ARRAY_LIST_H
 
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
 #include "list.h"
 #include "error.h"
 
