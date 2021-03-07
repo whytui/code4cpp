@@ -1,9 +1,7 @@
-#include <fcntl.h>
-#include <cstdio>
+#include "main.h"
 
 int main()
 {
-    int fd = open("/Users/liushiming/CLionProjects/code4cpp/ch16/main.cpp", O_RDWR);
-    printf("%d \n", fd);
+    cout << "hello" << endl;
     return 0;
 }
