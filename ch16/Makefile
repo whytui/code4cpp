@@ -1,7 +1,7 @@
 # 安装conan依赖
 SHELL = /bin/sh
 CMAKE_DIR = ../cmake-build-debug
-CONAN_DIR = ../ch16
+CONAN_DIR = $(shell pwd)
 
 default_target: conan
 
