@@ -11,6 +11,8 @@ string hello("hello linux");
 string hello("hello windows");
 #elif __unix__
 string hello("hello unix");
+#elif __APPLE__
+string hello("hello macos");
 #endif
 
 const int *p = new int(100);
