@@ -18,4 +18,6 @@ double get_timestamp();
 
 void time_server(int argc, char **argv);
 
+void select_demo();
+
 #endif //CODE4CPP_MAIN_H

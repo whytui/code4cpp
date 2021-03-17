@@ -1,5 +1,4 @@
-#include <string>
-#include <iostream>
+#include "main.h"
 
 using namespace std;
 
@@ -22,5 +21,6 @@ constexpr int port = 100;
 int main()
 {
     cout << hello << endl;
+    const_point_demo();
     return 0;
 }

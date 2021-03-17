@@ -12,5 +12,6 @@ set(src
         ${CMAKE_CURRENT_SOURCE_DIR}/thread_pool.h
         ${CMAKE_CURRENT_SOURCE_DIR}/sever.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/sever.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/time_server.cpp)
+        ${CMAKE_CURRENT_SOURCE_DIR}/time_server.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/select.cpp)
 add_executable(ch12 ${src})
