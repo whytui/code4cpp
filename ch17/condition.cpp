@@ -1,4 +1,4 @@
-#include "main.h"
+#include <iostream>
 
 using namespace std;
 
@@ -14,6 +14,8 @@ string hello("hello unix");
 string hello("hello macos");
 #endif
 
+#define DEBUG
+
 const int *p = new int(100);
 
 constexpr int port = 100;
@@ -21,6 +23,9 @@ constexpr int port = 100;
 int main()
 {
     cout << hello << endl;
-    const_point_demo();
+
+#ifdef DEBUG
+    printf("debug!!! \n");
+#endif
     return 0;
 }

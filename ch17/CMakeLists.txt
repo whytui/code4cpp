@@ -2,8 +2,12 @@ project(ch17)
 
 message(STATUS "Generating ch17..")
 
-set(src
-        ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/main.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/const.cpp)
-add_executable(ch17 ${src})
+# for循环加入源文件
+file(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+foreach(file ${files})
+    get_filename_component(name `${file} NAME)
+    add_executable(${name} ${file})
+    if(UNIX OR Linux)
+        target_link_libraries(${name} pthread)
+    endif()
+endforeach()

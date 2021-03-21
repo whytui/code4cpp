@@ -1,7 +1,9 @@
 //
 // Created by 刘时明 on 2021/3/17.
 //
-#include "main.h"
+#include <iostream>
+
+using namespace std;
 
 void const_point_demo()
 {
@@ -24,4 +26,9 @@ void const_point_demo()
     // p3 = &b; 编译错误
     // *p3 = 1000; 编译错误
     printf("%p \n", p3);
+}
+
+int main()
+{
+    const_point_demo();
 }

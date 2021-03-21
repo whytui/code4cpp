@@ -2,7 +2,7 @@
 * 作者：刘时明
 * 时间：2020/11/19 0019
 */
-#ifndef CODE4CPP_MAIN_H
+#ifndef CODE4CPP_CONDITION_H
 #define CODE4CPP_MAIN_H
 
 #include <cstdio>
@@ -37,4 +37,4 @@ void promise_demo();
 
 void join_demo();
 
-#endif //CODE4CPP_MAIN_H
+#endif //CODE4CPP_CONDITION_H
