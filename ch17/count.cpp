@@ -5,20 +5,6 @@
 
 using namespace std;
 
-struct A
-{
-    char a;
-    int b[0];
-    short c;
-};
-
-struct B
-{
-    char a;
-    int b[10000];
-    short c;
-};
-
 int getK(int array[], int size)
 {
     int k = 0;
@@ -36,10 +22,8 @@ int getK(int array[], int size)
 
 int main()
 {
-    cout << sizeof(A) << endl;
-    cout << sizeof(B) << endl;
     int arr1[] = {1, 2, 3, 4, 5}; // 0
-    int arr2[] = {4, 5, 1, 2, 3}; // 5
+    int arr2[] = {4, 5, 1, 2, 3}; // 2
     int arr3[] = {5, 1, 2, 3, 4}; // 1
 
     cout << getK(arr1, 5) << endl;

@@ -38,25 +38,29 @@ public:
 
     string get(const string &key)
     {
+        auto result = this->cmd("GET %s", key.c_str());
+        if (result != nullptr)
+        {
+            auto reply = (redisReply *) result;
+            std::string str = reply->str;
+            freeReplyObject(reply);
+        }
+        return "";
+    }
+
+    void set(const string &key, const string &value)
+    {
+        cmd("SET %s %s", key.c_str(), value.c_str());
+    }
+
+    void *cmd(const char *format ...)
+    {
         if (!this->connect_flag)
         {
             cout << "not connect!!!" << endl;
             return nullptr;
         }
-        auto reply = (redisReply *) redisCommand(this->connect, "GET %s", key.c_str());
-        std::string str = reply->str;
-        freeReplyObject(reply);
-        return str;
-    }
-
-    void set(const string &key, const string &value)
-    {
-        if (!this->connect_flag)
-        {
-            cout << "not connect!!!" << endl;
-            return;
-        }
-        redisCommand(this->connect, "SET %s %s", key.c_str(), value.c_str());
+        return redisCommand(this->connect, format);
     }
 };
 
