@@ -1,5 +1,6 @@
 #include <lang.h>
 #include <io.h>
+#include <concurrent.h>
 #include "main.h"
 
 using namespace std;
@@ -27,5 +28,13 @@ int main(int argc, char *argv[])
     cout << file->length() << endl;
 
     cout << file->name() << endl;
+
+    auto *pool = new CThreadPool();
+    pool->Create(10);
+
+    for (int i = 0; i < 100; ++i)
+    {
+        pool->inMsgRecvQueueAndSignal((char *) "hello");
+    }
     return 0;
 }

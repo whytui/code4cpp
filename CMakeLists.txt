@@ -74,13 +74,15 @@ add_subdirectory(windows)
 target_include_directories(code4cpp
         PRIVATE ${REDIS_ROOT}/utils/lang
         PRIVATE ${REDIS_ROOT}/utils/net
-        PRIVATE ${REDIS_ROOT}/utils/io)
+        PRIVATE ${REDIS_ROOT}/utils/io
+        PRIVATE ${REDIS_ROOT}/utils/concurrent)
 
 target_link_libraries(code4cpp
         PRIVATE pthread
         PRIVATE m
         PRIVATE lang
         PRIVATE net
-        PRIVATE io)
+        PRIVATE io
+        PRIVATE concurrent)
 
-link_directories(utils/lang/ utils/net/ utils/io/)
+link_directories(utils/lang/ utils/net/ utils/io/ utils/concurrent/)

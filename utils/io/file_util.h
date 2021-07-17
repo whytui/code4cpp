@@ -6,6 +6,8 @@ using namespace std;
 #include <string>
 #include <vector>
 
+typedef long long Long;
+
 struct File
 {
 private:
@@ -15,7 +17,7 @@ private:
 
     bool isDir;
 
-    u_long length;
+    Long length;
 
 public:
     bool deleteFile();
