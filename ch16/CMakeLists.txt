@@ -2,8 +2,8 @@ project(ch16)
 
 message(STATUS "Generating ch16..")
 
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
+#include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+#conan_basic_setup()
 
 set(src
         ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
