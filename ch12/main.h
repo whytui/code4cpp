@@ -2,7 +2,7 @@
 * 作者：刘时明
 * 时间：2020/8/9 0009-1:43
 */
-#ifndef CODE4CPP_MAIN_H
+#ifndef CODE4CPP_CONDITION_H
 #define CODE4CPP_MAIN_H
 
 #include <iostream>
@@ -18,4 +18,6 @@ double get_timestamp();
 
 void time_server(int argc, char **argv);
 
-#endif //CODE4CPP_MAIN_H
+void select_demo();
+
+#endif //CODE4CPP_CONDITION_H

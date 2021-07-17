@@ -4,6 +4,7 @@
 
 #include "main.h"
 #include <mysql.h>
+#include <cstring>
 
 const string &host = "119.29.117.244";
 const string &user = "root";

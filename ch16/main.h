@@ -2,7 +2,7 @@
 // Created by 刘时明 on 2021/3/5.
 //
 
-#ifndef CODE4CPP_MAIN_H
+#ifndef CODE4CPP_CONDITION_H
 #define CODE4CPP_MAIN_H
 
 #include <iostream>
@@ -21,4 +21,4 @@ void SqlInsert(const string &sql, int count, ...);
 
 void RedisTest();
 
-#endif //CODE4CPP_MAIN_H
+#endif //CODE4CPP_CONDITION_H

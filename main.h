@@ -1,4 +1,4 @@
-#ifndef CODE4CPP_MAIN_H
+#ifndef CODE4CPP_CONDITION_H
 #define CODE4CPP_MAIN_H
 
 #include <iostream>
