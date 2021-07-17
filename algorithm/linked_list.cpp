@@ -6,9 +6,7 @@
 #include "list.h"
 #include <iostream>
 
-using namespace std;
-
-template<typename T>
+template<class T>
 class LinkedNode
 {
 private:
@@ -26,19 +24,19 @@ private:
         LinkedNode(nullptr, nullptr, element);
     }
 
-    LinkedNode(LinkedNode<T> *prev,LinkedNode<T> *next,T &element)
+    LinkedNode(LinkedNode<T> *prev, LinkedNode<T> *next, T &element)
     {
-        this->prev=prev;
-        this->next=next;
-        this-> data= &element;
+        this->prev = prev;
+        this->next = next;
+        this->data = &element;
     }
 
-    template<typename E>
+    template<class T>
     friend
     class LinkedList;
 };
 
-template<typename T>
+template<class T>
 class LinkedList : public List<T>
 {
 private:
@@ -49,8 +47,8 @@ private:
 public:
     LinkedList()
     {
-        this->head= nullptr;
-        this->tail= nullptr;
+        this->head = nullptr;
+        this->tail = nullptr;
         this->c_size = 0;
     }
 
@@ -61,9 +59,9 @@ public:
 
     void addFirst(T &element)
     {
-        if(this->head== nullptr)
+        if (this->head == nullptr)
         {
-            this->head =new LinkedNode<T>(nullptr,this->tail,element);
+            this->head = new LinkedNode<T>(nullptr, this->tail, element);
         } else
         {
 //            Node<E> newNode = new Node<>(null, null, data);
@@ -72,10 +70,10 @@ public:
 //            newNode.next = temp;
 //            head = newNode;
 
-            auto *newNode= new LinkedNode<T>(element);
-            auto temp=head;
-            temp -> prev= newNode;
-            newNode->next=temp;
+            auto *newNode = new LinkedNode<T>(element);
+            auto temp = head;
+            temp->prev = newNode;
+            newNode->next = temp;
             head = newNode;
         }
         this->c_size++;
@@ -83,17 +81,17 @@ public:
 
     bool empty() const override
     {
-        return false;
+        return size() == 0;
     }
 
     int size() const override
     {
-        return 0;
+        return c_size;
     }
 
     T &get(int index) override
     {
-        T *temp=nullptr;
+        T *temp = nullptr;
         return *temp;
     }
 
@@ -125,7 +123,7 @@ public:
     void clear() override
     {
         auto temp = this->head->next;
-        while(temp != this->tail)
+        while (temp != this->tail)
         {
             temp = temp->next;
         }
@@ -137,17 +135,17 @@ public:
     void disPlay()
     {
         auto temp = this->head;
-        while(temp != nullptr)
+        while (temp != nullptr)
         {
-            cout << temp->data << endl;
-            temp=temp->next;
+            std::cout << temp->data << std::endl;
+            temp = temp->next;
         }
     }
 };
 
 void linkedDemo()
 {
-    auto *list=new LinkedList<int>();
+    auto *list = new LinkedList<int>();
     for (int i = 0; i < 10; ++i)
     {
         list->addFirst(i);

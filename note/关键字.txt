@@ -27,4 +27,4 @@ explicit
 右值引用和移动语义
 
 decltype
-    decltype(param)代表param到类型，例如decltype(name) remake即为定义一个和name类型一样的remake；
+    decltype(param)代表param的类型，例如decltype(name) remake即为定义一个和name类型一样的remake；
