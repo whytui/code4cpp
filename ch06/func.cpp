@@ -23,6 +23,7 @@ int optionResult(int a, int b, int(*func)(int, int))
 void func_point2()
 {
     name = add;
+
     printf("%d \n", (*name)(10, 5));
     // 实现一个动态函数调用，类似于Java的匿名内部类
     printf("%d \n", optionResult(1, 2, add));

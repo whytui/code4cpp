@@ -13,6 +13,11 @@ void printArgs(int argc, char *argv[], bool skipFirst = true)
     }
 }
 
+char* testFunc()
+{
+    printf("hello world!\n");
+}
+
 int main(int argc, char *argv[])
 {
     printArgs(argc, argv);
@@ -29,12 +34,11 @@ int main(int argc, char *argv[])
 
     cout << file->name() << endl;
 
-    auto *pool = new CThreadPool();
-    pool->Create(10);
-
+    ThreadPool threadPool;
     for (int i = 0; i < 100; ++i)
     {
-        pool->inMsgRecvQueueAndSignal((char *) "hello");
+        threadPool.add_task(testFunc);
     }
+    sleep(10);
     return 0;
 }
