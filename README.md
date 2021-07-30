@@ -7,6 +7,8 @@
 #### C++学习路线
 https://segmentfault.com/a/1190000022193127
 
+linux内核https://xinqiu.gitbooks.io/linux-insides-cn/content/
+
 #### 编译器：master 
 1. master分支 mac环境的64位clang
 2. win32分支 windows环境的64位vs2019
